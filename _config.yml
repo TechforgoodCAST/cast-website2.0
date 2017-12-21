@@ -16,3 +16,5 @@ description: second iteration of the cast website
 baseurl: ''
 url: https://techforgoodcast.github.io/cast-website2.0
 markdown: kramdown
+plugins:
+  - jekyll-admin
