@@ -1,7 +1,3 @@
----
----
-
----
-- about
-- home-2
-- contact
+- title: home
+- title: about
+- title: contact
