@@ -1,0 +1,30 @@
+{
+  "name": "cast-website2.0",
+  "version": "1.0.0",
+  "description": "second iteration of the cast website",
+  "main": "index.js",
+  "scripts": {
+    "css": "postcss ./_css/index.css --output ./style.min.css --watch --config ./postcss.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechforgoodCAST/cast-website2.0.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TechforgoodCAST/cast-website2.0/issues"
+  },
+  "homepage": "https://github.com/TechforgoodCAST/cast-website2.0#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-import": "^11.0.0"
+  },
+  "dependencies": {
+    "tachyons-custom": "^4.9.2"
+  }
+}

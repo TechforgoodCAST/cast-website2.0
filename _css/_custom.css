@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: var(--sans-serif);
+  font-weight: 400;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.teal {
+  color: var(--teal);
+}
+
+.bg-teal {
+  background-color: var(--teal);
+}
