@@ -11,5 +11,5 @@ collections:
 email: hello@wearecast.org.uk
 description: second iteration of the cast website
 baseurl: ''
-url: ''
+url: 'https://techforgoodcast.github.io/cast-website2.0'
 markdown: kramdown
