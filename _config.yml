@@ -8,6 +8,9 @@ collections:
   uploads:
     title: Uploads
     output: true
+  content:
+    title: content
+    output: true
 email: hello@wearecast.org.uk
 description: second iteration of the cast website
 baseurl: ''
