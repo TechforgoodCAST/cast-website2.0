@@ -11,3 +11,16 @@ create_data_file(
   :yaml,
   nav_titles
 )
+
+taglines = dato.taglines.map do |item|
+  {
+    id: item.tagline_id,
+    content: item.content
+  }
+end
+
+create_data_file(
+  "_data/taglines.yml",
+  :yaml,
+  taglines
+)
