@@ -2,9 +2,62 @@
 layout: default
 ---
 
-<div class="bg-navy mw6 center mt3">
-  <div class="ph4 pv3 tc">
-    <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
-    <p class="white">We help funders, nonprofits, businesses and government put digital at the heart of their service delivery and drive organisational change.</p>
+<div class="hero-background pv5">
+  <div class="bg-navy mw6 center">
+    <div class="ph4 pv3 tc">
+      <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
+
+      <p class="white">
+        {% assign headline = site.data.taglines | where: "id", "main-headline" %}
+        {{ headline.first.content }}
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<div class="mv4">
+  <h2 class="teal f3 tc">What We Do</h2>
+
+  <div class="mw8 flex flex-wrap justify-center center w-100">
+    {% assign what_we_dos = site.data.what_we_do | sort: "order" %}
+    {% for item in what_we_dos %}
+
+      <div class="tc mh5 white">
+        <div class="circle bg-{{item.color}} flex items-center pa4">
+          {{ item.content }}
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+<div class="bg-teal ph3 pv4">
+  <h2 class="white tc">Are you a charity or a funder?</h2>
+
+  <div class="mw7 center flex flex-wrap">
+    <div class="w-100 w-50-ns pa2">
+      <div class="bg-white tc pv3 ph4">
+        <h2 class="teal">How we help charities</h2>
+
+        {% assign help = site.data.taglines | where: "id", "how-we-help-charities" %}
+        <p class="silver">{{ help.first.content }}<p>
+
+        <h3 class="white bg-red br2 pa2 mt4 mw4 center">I am a charity</h3>
+      </div>
+
+    </div>
+
+    <div class="w-100 w-50-ns pa2">
+      <div class="bg-white tc pv3 ph4">
+        <h2 class="teal">We work with funders</h2>
+
+        {% assign work = site.data.taglines | where: "id", "we-work-with-funders" %}
+        <p class="silver">{{ work.first.content }}<p>
+
+        <h3 class="white bg-red br2 pa2 mt4 mw4 center">I am a funder</h3>
+      </div>
+    </div>
   </div>
 </div>
