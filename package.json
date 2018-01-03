@@ -4,7 +4,7 @@
   "description": "second iteration of the cast website",
   "main": "index.js",
   "scripts": {
-    "css": "postcss ./_css/index.css --output ./style.min.css --watch --config ./postcss.config.js"
+    "css": "postcss ./_css/index.css --output _site/style.min.css --watch --config ./postcss.config.js"
   },
   "repository": {
     "type": "git",
