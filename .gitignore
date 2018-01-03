@@ -1,4 +1,5 @@
-_site
+_site/*
+!_site/style.min.css
 .sass-cache
 .jekyll-metadata
 node_modules
