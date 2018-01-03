@@ -10,6 +10,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 # gem "jekyll", "~> 3.6.2"
 
+gem "dato"
+
 group :jekyll_plugins do
   gem "jekyll-admin"
   gem "github-pages"
