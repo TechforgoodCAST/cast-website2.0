@@ -2,16 +2,24 @@
 layout: default
 ---
 
-<div class="hero-background pv5">
-  <div class="bg-navy mw6 center">
-    <div class="ph4 pv3 tc">
-      <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
+<div class="relative">
 
-      <p class="white">
-        {% assign headline = site.data.taglines | where: "id", "main-headline" %}
-        {{ headline.first.content }}
-      </p>
+  <div class="flex absolute w-100 h-100">
+    <div class="w-100 w-50-ns bg-center cover hero-background-1"></div>
+    <div class="dn db-ns w-50-ns bg-center cover hero-background-2"></div>
+  </div>
 
+  <div class="pv5">
+    <div class="bg-navy mw6 center relative">
+      <div class="ph4 pv3 tc">
+        <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
+
+        <p class="white">
+          {% assign headline = site.data.taglines | where: "id", "main-headline" %}
+          {{ headline.first.content }}
+        </p>
+
+      </div>
     </div>
   </div>
 </div>
