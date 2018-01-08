@@ -5,6 +5,19 @@ body {
   line-height: 1.4;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headline);
+  font-weight: 400;
+}
+
+p {
+  font-size: var(--font-size-6);
+}
+
+
+/* utilities */
+
 .pointer {
   cursor: pointer;
 }
@@ -17,6 +30,25 @@ body {
   background-color: var(--teal);
 }
 
+.w-16 {
+  width: calc(100% / 6);
+}
+
+@media (--breakpoint-large) {
+  .w-16-l { width: calc(100% / 6); }
+}
+
+@media (--breakpoint-medium) {
+  .w-16-m { width: calc(100% / 6); }
+}
+
+@media (--breakpoint-not-small) {
+  .w-16-ns { width: calc(100% / 6); }
+}
+
+
+/* extra */
+
 .hero-background-1 {
   background-image: url(https://www.datocms-assets.com/4269/1514993151-cast-hero-image.jpg)
 }
@@ -25,8 +57,20 @@ body {
   background-image: url(https://www.datocms-assets.com/4269/1514993835-cast-hero-2.jpg)
 }
 
+.divider::before {
+  background-color: var(--teal);
+  height: 5px;
+  width: 50%;
+}
+
 .circle {
   height: 200px;
   width: 200px;
+  border-radius: 100%;
+}
+
+.mini-circle {
+  height: 23px;
+  width: 23px;
   border-radius: 100%;
 }

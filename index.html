@@ -25,11 +25,10 @@ layout: default
 </div>
 
 <div class="mv4">
-  <h2 class="teal f3 tc">What We Do</h2>
+  <h2 class="teal f3 tc fw4">What We Do</h2>
 
   <div class="mw8 flex flex-wrap justify-center center w-100">
-    {% assign what_we_dos = site.data.what_we_do | sort: "order" %}
-    {% for item in what_we_dos %}
+    {% for item in site.data.what_we_do %}
 
       <div class="tc mh5 white">
         <div class="circle bg-{{item.color}} flex items-center pa4">
@@ -68,4 +67,26 @@ layout: default
       </div>
     </div>
   </div>
+</div>
+
+<div class="mw7 center">
+  <h2 class="teal tc">What we believe</h2>
+
+  {% assign belief = site.data.taglines | where: "id", "what-we-believe" %}
+  <div class="measure center">
+    <p class="silver tc">{{ belief.first.content }}</p>
+  </div>
+
+  <div class="flex flex-wrap relative">
+
+    {% for tenet in site.data.six_tenets %}
+      <div class="w-33 w-16-ns tc flex items-center flex-column">
+        <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; margin-top: 25px"></span>
+        <p class="mini-circle bg-black white flex items-center justify-center z-1">{{ forloop.index }}</p>
+        <p class="f5 light-silver">{{ tenet }}<p>
+      </div>
+    {% endfor %}
+
+  </div>
+
 </div>

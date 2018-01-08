@@ -4,7 +4,8 @@
 
 :root {
 
-  --sans-serif: 'lato', 'helvetica neue', helvetica, arial;
+  --sans-serif: 'open sans', 'helvetica neue', helvetica, arial;
+  --headline: 'roboto slab', 'arial';
   --serif: georgia, serif;
   --code: consolas, monaco, monospace;
 
@@ -15,7 +16,7 @@
   --font-size-3: 1.8rem;
   --font-size-4: 1.2rem;
   --font-size-5: 1rem;
-  --font-size-6: 0.8rem;
+  --font-size-6: 0.9rem;
   --font-size-7: 0.75rem;
 
   --letter-spacing-tight:-.05em;
