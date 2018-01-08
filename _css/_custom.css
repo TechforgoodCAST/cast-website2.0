@@ -18,6 +18,11 @@ p {
 
 /* utilities */
 
+.ba2 {
+  border-style: solid;
+  border-width: 2px;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -49,12 +54,16 @@ p {
 
 /* extra */
 
-.hero-background-1 {
+.bg-hero-1 {
   background-image: url(https://www.datocms-assets.com/4269/1514993151-cast-hero-image.jpg)
 }
 
-.hero-background-2 {
+.bg-hero-2 {
   background-image: url(https://www.datocms-assets.com/4269/1514993835-cast-hero-2.jpg)
+}
+
+.bg-drawing-board {
+  background-image: url(https://www.datocms-assets.com/4269/1515422991-drawing-board.jpg);
 }
 
 .divider::before {

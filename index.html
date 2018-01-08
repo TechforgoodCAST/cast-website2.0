@@ -5,8 +5,8 @@ layout: default
 <div class="relative">
 
   <div class="flex absolute w-100 h-100">
-    <div class="w-100 w-50-ns bg-center cover hero-background-1"></div>
-    <div class="dn db-ns w-50-ns bg-center cover hero-background-2"></div>
+    <div class="w-100 w-50-ns bg-center cover bg-hero-1"></div>
+    <div class="dn db-ns w-50-ns bg-center cover bg-hero-2"></div>
   </div>
 
   <div class="pv5">
@@ -30,7 +30,10 @@ layout: default
   <div class="mw8 flex flex-wrap justify-center center w-100">
     {% for item in site.data.what_we_do %}
 
-      <div class="tc mh5 white">
+      <div class="tc mh5 mv3 white">
+        <p class="mini-circle bg-black white flex items-center justify-center z-1 absolute" style="margin-left: 20px">
+          {{ forloop.index }}
+        </p>
         <div class="circle bg-{{item.color}} flex items-center pa4">
           {{ item.content }}
         </div>
@@ -51,7 +54,7 @@ layout: default
         {% assign help = site.data.taglines | where: "id", "how-we-help-charities" %}
         <p class="silver">{{ help.first.content }}<p>
 
-        <h3 class="white bg-red br2 pa2 mt4 mw4 center">I am a charity</h3>
+        <a href="/for-charities" class="white no-underline f4 db ba2 b--red hover-bg-white hover-red bg-animate bg-red br2 pa2 mt4 mw4 center">I am a charity</a>
       </div>
 
     </div>
@@ -63,7 +66,7 @@ layout: default
         {% assign work = site.data.taglines | where: "id", "we-work-with-funders" %}
         <p class="silver">{{ work.first.content }}<p>
 
-        <h3 class="white bg-red br2 pa2 mt4 mw4 center">I am a funder</h3>
+        <a href="/for-funders" class="white no-underline f4 db ba2 b--red hover-bg-white hover-red bg-animate bg-red br2 pa2 mt4 mw4 center">I am a funder</a>
       </div>
     </div>
   </div>
@@ -81,12 +84,43 @@ layout: default
 
     {% for tenet in site.data.six_tenets %}
       <div class="w-33 w-16-ns tc flex items-center flex-column">
+        <!-- dividers  -->
         <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; margin-top: 25px"></span>
+        <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; bottom: 0"></span>
+
         <p class="mini-circle bg-black white flex items-center justify-center z-1">{{ forloop.index }}</p>
         <p class="f5 light-silver">{{ tenet }}<p>
       </div>
     {% endfor %}
 
   </div>
-
 </div>
+
+<div class="tc ph4 pv5">
+  <a class="dib br2 fw7 f6 bg-animate hover-white hover-bg-red no-underline red ba2 b--red pa2"
+     target="_blank"
+     href="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87">
+    Read the blog post "Six Tenets of Tech for Good"
+  </a>
+</div>
+
+<div class="bg-drawing-board bg-bottom cover pt4 pb5">
+  <h2 class="white tc pb5 pt0">Supporters and Funders</h2>
+
+  <div class="flex flex-wrap pv4 mw7 center bg-white">
+    {% for item in site.data.supporters_and_funders %}
+      <div class="w-33 ph3 pv4">
+
+        <a class="db" href="{{ item.link }}" target="_blank">
+          <div class="bg-center contain"
+               title="{{ item.image_title }}"
+               alt="{{ item.image_alt }}"
+               style="background-image: url({{ item.image_url }}); height: 100px; width: 250px"></div>
+        </a>
+
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include footer.html %}

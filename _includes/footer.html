@@ -1,0 +1,39 @@
+<div class="bg-teal pa4">
+
+  <div class="mw7 center flex flex-wrap">
+
+    <div class="w-100 w-30-ns">
+      <div class="mw4 w-100">
+        <img src="{{ site.logo_url }}" class="w-100">
+      </div>
+
+      <p class="white f7">© CAST 2018</p>
+      <p class="white f7">Reg Charity Number 1161998</p>
+      <p class="white f7">Company Number 9544506</p>
+    </div>
+
+    <div class="w-100 w-30-ns mt4">
+      {% for item in site.data.nav_titles %}
+        <a href="{{ item.url }}" class="db white no-underline hover-red mb1 f6">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+
+    <div class="w-100 w-30-ns mt3">
+      <p class="white f6">Get our essential newsletter</p>
+      {% include newsletter_form.html %}
+    </div>
+
+    <div class="w-100 w-10-ns mt4 tc flex flex-column items-center">
+      {% for item in site.data.social_channels %}
+        <a href="{{ item.link }}"
+           title="{{ item.image_title }}"
+           alt="{{ item.image_url }}"
+           target="_blank"
+           class="db bg-center contain mb3"
+           style="background-image: url({{ item.image_url }}); width: 25px; height: 25px"></a>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</div>

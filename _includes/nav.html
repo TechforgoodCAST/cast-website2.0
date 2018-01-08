@@ -1,8 +1,15 @@
-<nav class="flex justify-between items-center pa3 bg-teal white">
-  <h1 class="f3 mv2">CAST</h1>
-  <ul>
+<nav class="flex justify-between items-center bg-teal white">
+
+  <a href="{{ site.url }}" class="db w-25 ml3">
+    <div class="bg-left contain" style="background-image: url({{ site.logo_url }}); height: 90px"></div>
+  </a>
+
+  <ul class="mr3">
     {% for title in site.data.nav_titles %}
-      <li class="dib mh2">{{ title.title }}</li>
+      <li class="dib">
+        <a class="white no-underline mh2 hover-red" href="/{{ title.url }}">{{ title.title }}</a>
+      </li>
     {% endfor %}
   </ul>
+
 </nav>
