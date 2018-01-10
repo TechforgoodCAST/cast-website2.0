@@ -73,6 +73,16 @@ p {
   background-image: url(https://www.datocms-assets.com/4269/1515511585-postits.jpg);
 }
 
+.menu-highlight::before,
+.hover-menu-highlight:hover::before {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  content: "";
+  bottom: -3px;
+}
+
 .divider::before {
   background-color: var(--teal);
   height: 5px;
