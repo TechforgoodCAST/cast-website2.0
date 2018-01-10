@@ -14,7 +14,6 @@ module YamlHelper
 end
 
 paths = YamlHelper.file_paths([
-  "nav_titles",
   "taglines",
   "supporters_and_funders",
   "social_channels",
@@ -23,10 +22,6 @@ paths = YamlHelper.file_paths([
 ])
 
 data = [
-  dato.nav_titles.map{ |item| {
-    title: item.title,
-    url: item.title.parameterize }
-  },
   {
     main_headline: dato.tagline.main_headline,
     what_we_believe: dato.tagline.what_we_believe,
