@@ -3,4 +3,7 @@ _site/
 .jekyll-metadata
 node_modules
 
-_data
+_data/social_channels.yml
+_data/supporters_and_funders.yml
+_data/taglines.yml
+_data/bespoke_project_orgs.yml

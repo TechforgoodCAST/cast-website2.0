@@ -11,6 +11,7 @@ collections:
   content:
     title: content
     output: true
+include: ['_pages']
 email: hello@wearecast.org.uk
 description: second iteration of the cast website
 baseurl: ''

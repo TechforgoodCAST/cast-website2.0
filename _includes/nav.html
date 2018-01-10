@@ -6,9 +6,29 @@
 
   <ul class="mr3">
     {% for title in site.data.nav_titles %}
+
+      {% capture menu_item_url %}{{ title.url | prepend: '/' }}{% endcapture %}
+
+      <!-- css class to determine which menu item is highlighted  -->
+      {% if menu_item_url == "/home" and page.url == "/" %}
+        {% assign underline_class = "" %}
+      {% elsif page.url == menu_item_url %}
+        {% assign underline_class = "" %}
+      {% else %}
+        {% assign underline_class = "no-underline" %}
+      {% endif %}
+
+      <!-- rewrite home as "/"  -->
+      {% if title.url == "home" %}
+        {% assign url = "" %}
+      {% else %}
+        {% assign url = title.url %}
+      {% endif %}
+
       <li class="dib">
-        <a class="white no-underline mh2 hover-red" href="/{{ title.url }}">{{ title.title }}</a>
+        <a class="white {{ underline_class }} mh2 hover-red f6" href="/{{ url }}">{{ title.title }}</a>
       </li>
+
     {% endfor %}
   </ul>
 

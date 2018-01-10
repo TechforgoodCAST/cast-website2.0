@@ -5,20 +5,15 @@ layout: default
 <div class="relative">
 
   <div class="flex absolute w-100 h-100">
-    <div class="w-100 w-50-ns bg-center cover bg-hero-1"></div>
-    <div class="dn db-ns w-50-ns bg-center cover bg-hero-2"></div>
+    <div class="w-100 w-50-ns bg-center cover bg-drafting"></div>
+    <div class="dn db-ns w-50-ns bg-center cover bg-change"></div>
   </div>
 
   <div class="pv5">
     <div class="bg-navy mw6 center relative">
       <div class="ph4 pv3 tc">
         <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
-
-        <p class="white">
-          {% assign headline = site.data.taglines | where: "id", "main-headline" %}
-          {{ headline.first.content }}
-        </p>
-
+        <p class="white">{{ site.data.taglines.main_headline }}</p>
       </div>
     </div>
   </div>
@@ -50,11 +45,10 @@ layout: default
     <div class="w-100 w-50-ns pa2">
       <div class="bg-white tc pv3 ph4">
         <h2 class="teal">How we help charities</h2>
-
-        {% assign help = site.data.taglines | where: "id", "how-we-help-charities" %}
-        <p class="silver">{{ help.first.content }}<p>
-
-        <a href="/for-charities" class="white no-underline f4 db ba2 b--red hover-bg-white hover-red bg-animate bg-red br2 pa2 mt4 mw4 center">I am a charity</a>
+        <p class="silver">{{ site.data.taglines.how_we_help_charities }}<p>
+        <div class="mw4 center">
+          {% include button.html text="I am a charity" link="/for-charities" %}
+        </div>
       </div>
 
     </div>
@@ -62,11 +56,10 @@ layout: default
     <div class="w-100 w-50-ns pa2">
       <div class="bg-white tc pv3 ph4">
         <h2 class="teal">We work with funders</h2>
-
-        {% assign work = site.data.taglines | where: "id", "we-work-with-funders" %}
-        <p class="silver">{{ work.first.content }}<p>
-
-        <a href="/for-funders" class="white no-underline f4 db ba2 b--red hover-bg-white hover-red bg-animate bg-red br2 pa2 mt4 mw4 center">I am a funder</a>
+        <p class="silver">{{ site.data.taglines.we_work_with_funders }}<p>
+        <div class="mw4 center">
+          {% include button.html text="I am a funder" link="/for-funders" %}
+        </div>
       </div>
     </div>
   </div>
@@ -75,9 +68,8 @@ layout: default
 <div class="mw7 center">
   <h2 class="teal tc">What we believe</h2>
 
-  {% assign belief = site.data.taglines | where: "id", "what-we-believe" %}
   <div class="measure center">
-    <p class="silver tc">{{ belief.first.content }}</p>
+    <p class="silver tc">{{ site.data.taglines.what_we_believe }}</p>
   </div>
 
   <div class="flex flex-wrap relative">
@@ -88,7 +80,9 @@ layout: default
         <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; margin-top: 25px"></span>
         <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; bottom: 0"></span>
 
-        <p class="mini-circle bg-black white flex items-center justify-center z-1">{{ forloop.index }}</p>
+        <p class="mini-circle bg-black white flex items-center justify-center z-1">
+          {{ forloop.index }}
+        </p>
         <p class="f5 light-silver">{{ tenet }}<p>
       </div>
     {% endfor %}

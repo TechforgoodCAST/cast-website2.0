@@ -5,7 +5,6 @@ body {
   line-height: 1.4;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--headline);
   font-weight: 400;
@@ -54,11 +53,11 @@ p {
 
 /* extra */
 
-.bg-hero-1 {
+.bg-drafting {
   background-image: url(https://www.datocms-assets.com/4269/1514993151-cast-hero-image.jpg)
 }
 
-.bg-hero-2 {
+.bg-change {
   background-image: url(https://www.datocms-assets.com/4269/1514993835-cast-hero-2.jpg)
 }
 
@@ -66,10 +65,23 @@ p {
   background-image: url(https://www.datocms-assets.com/4269/1515422991-drawing-board.jpg);
 }
 
+.bg-all-hands {
+  background-image: url(https://www.datocms-assets.com/4269/1515511588-all-hands.jpg);
+}
+
+.bg-postit {
+  background-image: url(https://www.datocms-assets.com/4269/1515511585-postits.jpg);
+}
+
 .divider::before {
   background-color: var(--teal);
   height: 5px;
   width: 50%;
+}
+
+.equal-height-column {
+  padding-bottom: 100%;
+  margin-bottom: -100%;
 }
 
 .circle {
