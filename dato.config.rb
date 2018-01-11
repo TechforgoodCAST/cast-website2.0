@@ -16,11 +16,11 @@ end
 paths = YamlHelper.file_paths([
   "home_text",
   "for_charities_text",
-  "fuse_text",
   "supporters_and_funders",
   "social_channels",
   "logos",
-  "bespoke_project_orgs"
+  "bespoke_project_orgs",
+  "fuse_alumni"
 ])
 
 data = [
@@ -38,11 +38,6 @@ data = [
     prototyping: dato.for_charities_text.prototyping,
     user_testing: dato.for_charities_text.user_testing,
     sustainability: dato.for_charities_text.sustainability
-  },
-  {
-    headline: dato.fuse_text.headline,
-    what_is_it: dato.fuse_text.what_is_it,
-    how_does_it_work: dato.fuse_text.how_does_it_work
   },
   dato.supporter_funders.map { |item| {
     image_url: YamlHelper.add_origin(item.image.path),
@@ -68,7 +63,14 @@ data = [
     image_title: item.image.title,
     name: item.name,
     link: item.link }
-  }
+  },
+  dato.fuse_alumnis.map { |item| {
+    image_url: YamlHelper.add_origin(item.image.path),
+    image_alt: item.image.alt,
+    image_title: item.image.title,
+    link: item.link,
+    name: item.name }
+  },
 ]
 
 paths.zip(data).map do |xs|

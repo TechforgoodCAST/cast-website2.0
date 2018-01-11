@@ -69,8 +69,12 @@ p {
   background-image: url(https://www.datocms-assets.com/4269/1515511588-all-hands.jpg);
 }
 
-.bg-postit {
+.bg-postit-1 {
   background-image: url(https://www.datocms-assets.com/4269/1515511585-postits.jpg);
+}
+
+.bg-postit-2 {
+  background-image: url(https://www.datocms-assets.com/4269/1515683394-postit-2.jpg);
 }
 
 .menu-highlight::before,
