@@ -14,27 +14,13 @@ module YamlHelper
 end
 
 paths = YamlHelper.file_paths([
-  "taglines",
   "supporters_and_funders",
   "social_channels",
-  "logos",
-  "bespoke_project_orgs"
+  "bespoke_project_orgs",
+  "fuse_alumni"
 ])
 
 data = [
-  {
-    main_headline: dato.tagline.main_headline,
-    what_we_believe: dato.tagline.what_we_believe,
-    we_work_with_funders: dato.tagline.we_work_with_funders,
-    how_we_help_charities: dato.tagline.how_we_help_charities,
-    fuse_blurb: dato.tagline.fuse_blurb,
-    fellowship_blurb: dato.tagline.fellowship_blurb,
-    training_and_learning: dato.tagline.training_and_learning,
-    know_your_audience: dato.tagline.know_your_audience,
-    prototyping: dato.tagline.prototyping,
-    user_testing: dato.tagline.user_testing,
-    sustainability: dato.tagline.sustainability
-  },
   dato.supporter_funders.map { |item| {
     image_url: YamlHelper.add_origin(item.image.path),
     image_alt: item.image.alt,
@@ -49,17 +35,20 @@ data = [
     link: item.link,
     name: item.name }
   },
-  {
-    fuse: YamlHelper.add_origin(dato.logo.fuse_logo.path),
-    fellowship: YamlHelper.add_origin(dato.logo.fellowship_logo.path)
-  },
   dato.bespoke_project_orgs.map { |item| {
     image_url: YamlHelper.add_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
     name: item.name,
     link: item.link }
-  }
+  },
+  dato.fuse_alumnis.map { |item| {
+    image_url: YamlHelper.add_origin(item.image.path),
+    image_alt: item.image.alt,
+    image_title: item.image.title,
+    link: item.link,
+    name: item.name }
+  },
 ]
 
 paths.zip(data).map do |xs|

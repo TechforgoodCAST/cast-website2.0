@@ -69,8 +69,16 @@ p {
   background-image: url(https://www.datocms-assets.com/4269/1515511588-all-hands.jpg);
 }
 
-.bg-postit {
+.bg-postit-1 {
   background-image: url(https://www.datocms-assets.com/4269/1515511585-postits.jpg);
+}
+
+.bg-postit-2 {
+  background-image: url(https://www.datocms-assets.com/4269/1515683394-postit-2.jpg);
+}
+
+.bg-flowchart {
+  background-image: url(https://www.datocms-assets.com/4269/1515686887-flowchart.jpg);
 }
 
 .menu-highlight::before,
@@ -94,13 +102,21 @@ p {
   margin-bottom: -100%;
 }
 
-.circle {
+/* circles */
+
+.circle-large {
   height: 200px;
   width: 200px;
   border-radius: 100%;
 }
 
-.mini-circle {
+.circle-medium {
+  height: 130px;
+  width: 130px;
+  border-radius: 100%;
+}
+
+.circle-mini {
   height: 23px;
   width: 23px;
   border-radius: 100%;
