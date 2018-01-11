@@ -80,4 +80,20 @@ nav_highlight: for-charities
 
 <div class="mw7 center mv4">
   <h2 class="teal tc">Fuse Alumni</h2>
+
+  <div class="flex flex-wrap mb5">
+    {% for item in site.data.fuse_alumni %}
+      <div class="w-50 w-25-ns pa3">
+        <a href="{{ item.link }}" target="_blank" alt="{{ item.name }}" class="bg-center contain db" style="background-image: url({{ item.image_url }}); height: 100px"></a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% assign comic = site.data.logos.funded_by_comic %}
+  {% assign blf   = site.data.logos.big_lottery_fund %}
+  <h2 class="teal tc">Fuse is funded by</h2>
+  <div class="flex mw6 center">
+      <a href="{{ comic.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ comic.image_url }}); height: 100px"></a>
+      <a href="{{ blf.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ blf.image_url }}); height: 100px"></a>
+  </div>
 </div>
