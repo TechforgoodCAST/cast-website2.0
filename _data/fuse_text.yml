@@ -43,3 +43,17 @@ rachael_quote:
   text: I had been pretty confident that I had a good grasp of what our services needed, from my privileged position as part of the digital team at head office working with the charity’s services team. How wrong I was. I very quickly became aware that actually I knew very little about what our services — and most importantly our service users — really want and need from us.
   name: Rachel Townley
   organisation: Action for Children
+
+success_stories:
+  age_uk: |-
+    On the Fuse programme, Age UK spoke to staff, volunteers and older people to understand how technology could have a transformative impact in supporting older people to enjoy later life. After going up and down the country visiting people’s homes, a new tool was developed to enable workers to have natural conversations with older people that covered key topics to ensure they could help as much as possible.
+
+    Age UK is currently piloting the new tool in four locations across the UK. After the pilot, the team plan to make changes based on feedback from users and then roll out to more locations.
+  action_for_children: |-
+    On the Fuse programme, Age UK spoke to staff, volunteers and older people to understand how technology could have a transformative impact in supporting older people to enjoy later life. After going up and down the country visiting people’s homes, a new tool was developed to enable workers to have natural conversations with older people that covered key topics to ensure they could help as much as possible.
+
+    Age UK is currently piloting the new tool in four locations across the UK. After the pilot, the team plan to make changes based on feedback from users and then roll out to more locations.
+
+unavailable:
+  head: Unfortunately, all places are allocated for our next cohort starting in early 2018.
+  sub: However, we offer Fuse as a paid for programme for larger charites. We would love to talk to you about how Fuse could help your organisation.

@@ -77,6 +77,10 @@ p {
   background-image: url(https://www.datocms-assets.com/4269/1515683394-postit-2.jpg);
 }
 
+.bg-flowchart {
+  background-image: url(https://www.datocms-assets.com/4269/1515686887-flowchart.jpg);
+}
+
 .menu-highlight::before,
 .hover-menu-highlight:hover::before {
   background-color: #fff;

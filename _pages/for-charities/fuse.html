@@ -4,6 +4,8 @@ permalink: /for-charities/fuse
 nav_highlight: for-charities
 ---
 
+{% assign fuse_text = site.data.fuse_text %}
+
 <div class="mw7 center mt3 mb4 flex">
   <div class="w-100 w-50-ns pv4 ph3">
     <div class="bg-center contain"
@@ -13,7 +15,7 @@ nav_highlight: for-charities
 
   <div class="w-100 w-50-ns pv4 ph3">
     <h2 class="teal">Fuse</h2>
-    <div class="gray">{{ site.data.fuse_text.headline | markdownify }}</div>
+    <div class="gray">{{ fuse_text.headline | markdownify }}</div>
     <p class="f7">next cohort starts in 2018</p>
   </div>
 </div>
@@ -22,12 +24,12 @@ nav_highlight: for-charities
   <div class="mw7 center flex white">
     <div class="w-100 w-50-ns ph3">
       <h2>What is Fuse?</h2>
-      <div>{{ site.data.fuse_text.what_is_it | markdownify }}</div>
+      <div>{{ fuse_text.what_is_it | markdownify }}</div>
     </div>
 
     <div class="w-100 w-50-ns ph3">
       <h2>How does it work?</h2>
-      <div>{{ site.data.fuse_text.how_does_it_work | markdownify }}</div>
+      <div>{{ fuse_text.how_does_it_work | markdownify }}</div>
     </div>
   </div>
 </div>
@@ -36,7 +38,7 @@ nav_highlight: for-charities
   <h2 class="teal tc mv4">What you'll be doing</h2>
 
   <div class="flex flex-wrap overflow-hidden">
-    {% for item in site.data.fuse_text.weeks %}
+    {% for item in fuse_text.weeks %}
 
       <div class="w-100 w-33-ns tc pa2 relative">
         <div class="white bg-purple left-0 right-0 relative z-5 circle-medium center flex flex-column justify-center">
@@ -71,9 +73,9 @@ nav_highlight: for-charities
   <div class="mw7 center pv4">
     <div class="bg-white mw6 pa4">
       <p class="f1 absolute ma0 silver" style="margin-top: -2.5rem">“</p>
-      <p>{{ site.data.fuse_text.rachael_quote.text }} ”</p>
-      <p class="f7 ma1">{{ site.data.fuse_text.rachael_quote.name }}</p>
-      <p class="f7 ma1">{{ site.data.fuse_text.rachael_quote.organisation }}</p>
+      <p>{{ fuse_text.rachael_quote.text }} ”</p>
+      <p class="f7 ma1">{{ fuse_text.rachael_quote.name }}</p>
+      <p class="f7 ma1">{{ fuse_text.rachael_quote.organisation }}</p>
     </div>
   </div>
 </div>
@@ -97,3 +99,44 @@ nav_highlight: for-charities
       <a href="{{ blf.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ blf.image_url }}); height: 100px"></a>
   </div>
 </div>
+
+<div class="bg-flowchart bg-center cover pt4 pb5">
+  <div class="mw7 center">
+    <h2 class="white tc mb5">Fuse success stories</h2>
+
+    {% assign success = fuse_text.success_stories %}
+
+    <div class="flex flex-wrap">
+      <div class="w-100 w-50-ns">
+        <div class="ph4 pb3 bg-white">
+          <div class="bg-center contain" style="background-image: url({{ site.data.logos.age_uk }}); height: 200px"></div>
+          <p class="ttu fw7">Case study</p>
+          <p class="fw7">Age UK</p>
+          <div>{{ success.age_uk | markdownify }}</div>
+        </div>
+      </div>
+
+      <div class="w-100 w-50-ns">
+        <div class="ph4 pb3 bg-white">
+          <div class="bg-center contain" style="background-image: url({{ site.data.logos.action_for_children }}); height: 200px"></div>
+          <p class="ttu fw7">Case study</p>
+          <p class="fw7">Action for children</p>
+          <div>{{ success.action_for_children | markdownify }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mw7 center pt4 pb5">
+  <h2 class="teal tc">Want to take your organisation through Fuse?</h2>
+  <div class="measure center tc">
+    <p class="f5 fw7">{{ fuse_text.unavailable.head }}</p>
+    <p>{{ fuse_text.unavailable.sub }}</p>
+    <div class="ph4">
+      {% include button.html text="Get in touch about Fuse" link="mailto:hello@wearecast.org.uk" %}
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
