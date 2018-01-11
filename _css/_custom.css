@@ -94,13 +94,21 @@ p {
   margin-bottom: -100%;
 }
 
-.circle {
+/* circles */
+
+.circle-large {
   height: 200px;
   width: 200px;
   border-radius: 100%;
 }
 
-.mini-circle {
+.circle-medium {
+  height: 130px;
+  width: 130px;
+  border-radius: 100%;
+}
+
+.circle-mini {
   height: 23px;
   width: 23px;
   border-radius: 100%;

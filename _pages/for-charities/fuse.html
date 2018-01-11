@@ -1,0 +1,70 @@
+---
+layout: default
+permalink: /for-charities/fuse
+nav_highlight: for-charities
+---
+
+<div class="mw7 center mt3 flex">
+  <div class="w-100 w-50-ns pv4 ph3">
+    <div class="bg-center contain"
+         style="background-image: url({{ site.data.logos.fuse }}); height: 204px">
+    </div>
+  </div>
+
+  <div class="w-100 w-50-ns pv4 ph3">
+    <h2 class="teal">Fuse</h2>
+    <div class="gray">{{ site.data.fuse_text.headline | markdownify }}</div>
+    <p class="f7">next cohort starts in 2018</p>
+  </div>
+</div>
+
+<div class="bg-navy">
+  <div class="mw7 center flex white">
+    <div class="w-100 w-50-ns pa3">
+      <h2>What is Fuse?</h2>
+      <div>{{ site.data.fuse_text.what_is_it | markdownify }}</div>
+    </div>
+
+    <div class="w-100 w-50-ns pa3">
+      <h2>How does it work?</h2>
+      <div>{{ site.data.fuse_text.how_does_it_work | markdownify }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="mw7 center">
+  <h2 class="teal tc mb5">What you'll be doing</h2>
+
+  <div class="flex flex-wrap">
+    {% for item in site.data.fuse_text.weeks %}
+      <div class="w-100 w-33-ns tc pa2 relative">
+        <div
+        class="white bg-purple left-0 right-0 z-5 circle-medium center absolute flex flex-column justify-center"
+        style="margin-top: -50px">
+          <p class="f5 ma0">WEEKS</p>
+          <p class="f3 ma0">{{ item.range }}</p>
+        </div>
+        <div class="bg-light-gray pt4 pa3 mt4 equal-height-column overflow-hidden">
+          <p class="f4 fw7 ttu mt4 teal">Key activities</p>
+          {% for activity in item.key_activities %}
+            <p class="f6">{{ activity }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="flex flex-wrap">
+    {% for item in site.data.fuse_text.weeks %}
+      <div class="w-100 w-33-ns tc pa2 relative">
+        <div class="bg-light-gray ph3 pb3 equal-height-column overflow-hidden">
+          <p class="f4 fw7 ttu teal">Main outputs</p>
+          {% for output in item.main_outputs %}
+            <p class="f6">{{ output }}</p>
+          {% endfor %}
+        </div>
+        <div class="bg-purple absolute w-100 left-0 bottom-0" style="height: 3px"></div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

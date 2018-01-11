@@ -14,7 +14,9 @@ module YamlHelper
 end
 
 paths = YamlHelper.file_paths([
-  "taglines",
+  "home_text",
+  "for_charities_text",
+  "fuse_text",
   "supporters_and_funders",
   "social_channels",
   "logos",
@@ -23,17 +25,24 @@ paths = YamlHelper.file_paths([
 
 data = [
   {
-    main_headline: dato.tagline.main_headline,
-    what_we_believe: dato.tagline.what_we_believe,
-    we_work_with_funders: dato.tagline.we_work_with_funders,
-    how_we_help_charities: dato.tagline.how_we_help_charities,
-    fuse_blurb: dato.tagline.fuse_blurb,
-    fellowship_blurb: dato.tagline.fellowship_blurb,
-    training_and_learning: dato.tagline.training_and_learning,
-    know_your_audience: dato.tagline.know_your_audience,
-    prototyping: dato.tagline.prototyping,
-    user_testing: dato.tagline.user_testing,
-    sustainability: dato.tagline.sustainability
+    main_headline: dato.home_text.main_headline,
+    what_we_believe: dato.home_text.what_we_believe,
+    we_work_with_funders: dato.home_text.we_work_with_funders,
+    how_we_help_charities: dato.home_text.how_we_help_charities
+  },
+  {
+    fuse_blurb: dato.for_charities_text.fuse_blurb,
+    fellowship_blurb: dato.for_charities_text.fellowship_blurb,
+    training_and_learning: dato.for_charities_text.training_and_learning,
+    know_your_audience: dato.for_charities_text.know_your_audience,
+    prototyping: dato.for_charities_text.prototyping,
+    user_testing: dato.for_charities_text.user_testing,
+    sustainability: dato.for_charities_text.sustainability
+  },
+  {
+    headline: dato.fuse_text.headline,
+    what_is_it: dato.fuse_text.what_is_it,
+    how_does_it_work: dato.fuse_text.how_does_it_work
   },
   dato.supporter_funders.map { |item| {
     image_url: YamlHelper.add_origin(item.image.path),

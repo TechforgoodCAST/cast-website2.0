@@ -1,0 +1,41 @@
+headline: The world's only nonprofit technology accelerator. Fuse works with established
+  nonprofits to build scalable, user-centred, digital services.
+what_is_it: |-
+  Fuse is a 12 week programme where charities, alongside CAST’s team of digital experts, interrogate a problem space, generate ideas for solving a well-identified problem within that space and then build a prototype digital service or product to take to pilot.
+
+  Our user-centred, test-driven ethos helps ensure a successful outcome: a well researched, user-centred solution to the identified problem.
+how_does_it_work: |-
+  A nominated individual from the charity is co-located with CAST’s team, away from their normal place of work, for four days for the first eight weeks of the programme.
+
+  We introduce the tools and techniques of lean and agile digital product development, which are the mainstay of tech innovation. CAST has an ethos of “learn by doing” with full support from our own product lead and programme coordinator.
+weeks:
+  - range: 1-4
+    key_activities:
+      - Interrogate problem space
+      - User interviews
+      - Understanding user behaviours
+      - Desk research
+      - Create hypotheses
+    main_outputs:
+      - Set of well-researched and synthesised user needs
+      - Comprehensive understanding of the problem space
+  - range: 5-8
+    key_activities:
+      - Early idea generation and testing
+      - Validating hypotheses
+      - Start planning integration
+      - End of month playback to senior stakeholder team
+    main_outputs:
+      - Refined problem statement
+      - Prototypes (eg. mock ups) for testing
+      - Outline feature set of the prototype
+  - range: 9-12
+    key_activities:
+      - User journey mapping
+      - Start technical development
+      - Integration into the organisation
+      - End of Fuse playback to senior stakeholder team
+    main_outputs:
+      - Solution statement
+      - Refined UI design
+      - Key documents that outline the solution

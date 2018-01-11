@@ -1,6 +1,7 @@
 ---
 layout: default
-permalink: /for-charities
+permalink: /for-charities/
+nav_highlight: for-charities
 ---
 
 <div class="bg-all-hands cover bg-top ph5 pv6">
@@ -13,23 +14,33 @@ permalink: /for-charities
   <h2 class="teal tc mb5 fw7">Our funded programmes for charities</h2>
   <div class="flex flex-wrap overflow-hidden">
 
+    {% capture fuse_link %}
+      {% link _pages/for-charities/fuse.html %}
+    {% endcapture %}
+
     <div class="measure w-100 w-50-ns ph3 tc mb5 equal-height-column flex flex-column justify-between">
-      <div class="bg-center contain"
-           style="background-image: url({{ site.data.logos.fuse }}); height: 100px"></div>
+      <a href="{{ fuse_link }}"
+         class="bg-center contain db"
+         style="background-image: url({{ site.data.logos.fuse }}); height: 100px"></a>
       <h3 class="teal tc">The world's first only non profit technology accelerator</h3>
-      <div>{{ site.data.taglines.fuse_blurb | markdownify }}</div>
+      <div>{{ site.data.for_charities_text.fuse_blurb | markdownify }}</div>
       <div class="center mw5">
-        {% include button.html text="More about Fuse" link="/fuse" %}
+        {% include button.html text="More about Fuse" link=fuse_link %}
       </div>
     </div>
 
+    {% capture fellowship_link %}
+      {% link _pages/for-charities/fellowship.html %}
+    {% endcapture %}
+
     <div class="measure w-100 w-50-ns ph3 tc mb5 equal-height-column flex flex-column justify-between">
-      <div class="bg-center contain"
-           style="background-image: url({{ site.data.logos.fellowship }}); height: 100px"></div>
+      <a href="{{ fellowship_link }}"
+         class="bg-center contain db"
+         style="background-image: url({{ site.data.logos.fellowship }}); height: 100px"></a>
       <h3 class="teal tc">Helping nonprofit senior leaders and CEOs understand digital</h3>
-      <div>{{ site.data.taglines.fellowship_blurb | markdownify }}</div>
+      <div>{{ site.data.for_charities_text.fellowship_blurb | markdownify }}</div>
       <div class="center mw5">
-        {% include button.html text="More about Fellowship" link="/fellowship" %}
+        {% include button.html text="More about Fellowship" link=fellowship_link %}
       </div>
     </div>
 
@@ -40,35 +51,35 @@ permalink: /for-charities
   <div class="mw7 center tc">
     <h2 class="white">Training and Learning</h2>
     <div class="white measure center">
-      {{ site.data.taglines.training_and_learning | markdownify }}
+      {{ site.data.for_charities_text.training_and_learning | markdownify }}
     </div>
 
     <div class="flex flex-wrap pb5">
       <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
         <div class="bg-white equal-height-column pv3 ph4">
           <h3 class="f5 fw7 teal">Interviews and research. Getting to know your audience</h3>
-          <div class="silver">{{ site.data.taglines.know_your_audience | markdownify }}</div>
+          <div class="silver">{{ site.data.for_charities_text.know_your_audience | markdownify }}</div>
         </div>
       </div>
 
       <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
         <div class="bg-white equal-height-column pv3 ph4">
           <h3 class="f5 fw7 teal">Prototyping services and products</h3>
-          <div class="silver">{{ site.data.taglines.prototyping | markdownify }}</div>
+          <div class="silver">{{ site.data.for_charities_text.prototyping | markdownify }}</div>
         </div>
       </div>
 
       <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
         <div class="bg-white equal-height-column pv3 ph4">
           <h3 class="f5 fw7 teal">User testing. From ideas to end-to-end service pilots.</h3>
-          <div class="silver">{{ site.data.taglines.user_testing | markdownify }}</div>
+          <div class="silver">{{ site.data.for_charities_text.user_testing | markdownify }}</div>
         </div>
       </div>
 
       <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
         <div class="bg-white equal-height-column pv3 ph4">
           <h3 class="f5 fw7 teal">Uncovering financial value and sustainability.</h3>
-          <div class="silver">{{ site.data.taglines.sustainability | markdownify }}</div>
+          <div class="silver">{{ site.data.for_charities_text.sustainability | markdownify }}</div>
         </div>
       </div>
     </div>
