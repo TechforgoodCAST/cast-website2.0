@@ -37,7 +37,7 @@ nav_highlight: partners-and-network
     <h2 class="white f3 mt0">Our clients and supporters</h2>
     <p class="white measure center">{{ pn_text.supporters_blurb }}</p>
 
-    <div class="flex flex-wrap mt4 mb5 bg-white">
+    <div class="flex flex-wrap mt4 mb5 pa4 bg-white">
       {% for item in site.data.clients_and_supporters %}
         <div class="w-50 w-25-ns pa3">
           <a href="{{ item.link }}" target="_blank" alt="{{ item.name }}" class="bg-center contain db" style="background-image: url({{ item.image_url }}); height: 100px"></a>
@@ -46,3 +46,5 @@ nav_highlight: partners-and-network
     </div>
   </div>
 </div>
+
+{% include footer.html %}

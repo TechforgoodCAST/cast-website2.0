@@ -1,0 +1,122 @@
+<!-- frontmatter for home page handled in index.html  -->
+<div class="relative">
+
+  <div class="flex absolute w-100 h-100">
+    <div class="w-100 w-50-ns bg-center cover bg-drafting"></div>
+    <div class="dn db-ns w-50-ns bg-center cover bg-change"></div>
+  </div>
+
+  <div class="pv5">
+    <div class="bg-navy mw6 center relative">
+      <div class="ph4 pv3 tc">
+        <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
+        <p class="white">{{ site.data.home_text.main_headline }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mv4">
+  <h2 class="teal f3 tc">What We Do</h2>
+
+  <div class="mw8 flex flex-wrap justify-center center w-100">
+    {% for item in site.data.what_we_do %}
+
+      <div class="tc mh5 mv3 white">
+        <p class="circle-mini bg-black white flex items-center justify-center z-1 absolute" style="margin-left: 20px">
+          {{ forloop.index }}
+        </p>
+        <div class="circle-large bg-{{item.color}} flex items-center pa4">
+          {{ item.content }}
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+<div class="bg-teal ph3 pv4">
+  <h2 class="white f3 tc">Are you a charity or a funder?</h2>
+
+  <div class="mw7 center flex flex-wrap">
+    <div class="w-100 w-50-ns pa2">
+      <div class="bg-white tc pv3 ph4">
+        <h2 class="teal">How we help charities</h2>
+        <p class="silver">{{ site.data.home_text.how_we_help_charities }}<p>
+        <div class="mw4 center mb4">
+
+          {% capture charities_link %}
+            {% link _pages/for-charities.html %}
+          {% endcapture %}
+
+          {% include button.html text="I am a charity" link=charities_link %}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="w-100 w-50-ns pa2">
+      <div class="bg-white tc pv3 ph4">
+        <h2 class="teal">We work with funders</h2>
+        <p class="silver">{{ site.data.home_text.we_work_with_funders }}<p>
+        <div class="mw4 center mb4">
+          {% include button.html text="I am a funder" link="/for-funders" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mw7 center">
+  <h2 class="teal f3 tc">What we believe</h2>
+
+  <div class="measure center">
+    <p class="silver tc">{{ site.data.home_text.what_we_believe }}</p>
+  </div>
+
+  <div class="flex flex-wrap relative">
+
+    {% for tenet in site.data.six_tenets %}
+      <div class="w-33 w-16-ns tc flex items-center flex-column">
+        <!-- dividers  -->
+        <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; margin-top: 25px"></span>
+        <span class="absolute w-25-ns w-100 bg-teal z-0" style="height: 5px; bottom: 0"></span>
+
+        <p class="circle-mini bg-black white flex items-center justify-center z-1">
+          {{ forloop.index }}
+        </p>
+        <p class="f5 light-silver">{{ tenet }}<p>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+<div class="tc ph4 pv5 mw6 center">
+  {% include inverted_button.html
+     text="Read the blog post 'Six Tenets of Tech for Good'"
+     link="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87"
+     target="_blank"
+  %}
+</div>
+
+<div class="bg-drawing-board bg-bottom cover pt4 pb5">
+  <h2 class="white f3 tc mt3 mb4 pt0">Supporters and Funders</h2>
+
+  <div class="flex flex-wrap pv4 mw7 center bg-white">
+    {% for item in site.data.supporters_and_funders %}
+      <div class="w-33 ph3 pv4">
+
+        <a class="db" href="{{ item.link }}" target="_blank">
+          <div class="bg-center contain"
+               title="{{ item.image_title }}"
+               alt="{{ item.image_alt }}"
+               style="background-image: url({{ item.image_url }}); height: 100px; width: 250px"></div>
+        </a>
+
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include footer.html %}
