@@ -4,4 +4,97 @@ permalink: /for-charities/fellowship
 nav_highlight: for-charities
 ---
 
-<h2>hello fellowship</h2>
+{% assign fellowship_text = site.data.fellowship_text %}
+
+<div class="mw7 center mt3 mb4 flex">
+  <div class="w-100 w-50-ns pv4 ph3">
+    <div class="bg-center contain"
+         style="background-image: url({{ site.data.logos.fellowship }}); height: 204px">
+    </div>
+  </div>
+
+  <div class="w-100 w-50-ns pv4 ph3">
+    <h2 class="teal">Digital Fellowship</h2>
+    <div class="gray">{{ fellowship_text.headline | markdownify }}</div>
+    <p class="f7">next cohort starts in 2018</p>
+  </div>
+</div>
+
+<div class="bg-navy pt4 pb5">
+  <div class="mw7 center flex white">
+    <div class="w-100 w-50-ns ph3">
+      <h2>What is the Digital Fellowship?</h2>
+      <div>{{ fellowship_text.what_is_it | markdownify }}</div>
+    </div>
+
+    <div class="w-100 w-50-ns ph3">
+      <h2>How does it work?</h2>
+      <div>{{ fellowship_text.how_does_it_work | markdownify }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="mw7 center">
+  <h2 class="teal tc mv4">What you'll be doing</h2>
+
+  <div class="flex flex-wrap overflow-hidden">
+    {% for item in fellowship_text.weeks %}
+
+      <div class="w-100 w-33-ns tc pa2 relative">
+        <div class="white bg-purple left-0 right-0 relative z-5 circle-medium center flex flex-column justify-center">
+          <p class="f5 ma0">WEEKS</p>
+          <p class="f3 ma0">{{ item.range }}</p>
+        </div>
+
+        <div class="z-0 relative" style="margin-top: -50px">
+          <div class="bg-light-gray pt4 equal-height-column">
+            <p class="f4 fw7 ttu mt4 teal">Key activities</p>
+            {% for activity in item.key_activities %}
+            <p class="f6">{{ activity }}</p>
+            {% endfor %}
+
+            <p class="f4 fw7 ttu teal">Main outputs</p>
+            {% for output in item.main_outputs %}
+            <p class="f6">{{ output }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+  <div class="mw6 tc center mt4 pa2">
+    {% include button.html text="Download the Digital Fellowship guide" %}
+  </div>
+</div>
+
+<div class="bg-postit-2 bg-center cover mt5">
+  <div class="mw7 center pv4">
+    <div class="bg-white mw6 pa4">
+      <p class="f1 absolute ma0 silver" style="margin-top: -2.5rem">“</p>
+      <p>{{ fellowship_text.testimonial.text }} ”</p>
+      <p class="f7 ma1">{{ fellowship_text.testimonial.name }}</p>
+      <p class="f7 ma1">{{ fellowship_text.testimonial.organisation }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-flowchart bg-center cover pt4 pb5">
+  <div class="mw7 center">
+    <h2 class="white tc mb5">Watch the video of the Fellows' thoughts on the programme</h2>
+  </div>
+</div>
+
+<div class="mw7 center pt4 pb5">
+  <h2 class="teal tc">Interested in the Fellowship?</h2>
+  <div class="measure center tc">
+    <p class="f5 fw7">{{ fellowship_text.unavailable_message.head }}</p>
+    <p>{{ fellowship_text.unavailable_message.sub }}</p>
+    <div class="ph4">
+      {% include button.html text="Get in touch about the Fellowship" link="mailto:hello@wearecast.org.uk?subject=fellowship enquiry" %}
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
