@@ -105,13 +105,13 @@
 
   <div class="flex flex-wrap pv4 mw7 center bg-white">
     {% for item in site.data.supporters_and_funders %}
-      <div class="w-33 ph3 pv4">
+      <div class="w-50 w-33-ns ph3 pv4">
 
         <a class="db" href="{{ item.link }}" target="_blank">
           <div class="bg-center contain"
                title="{{ item.image_title }}"
                alt="{{ item.image_alt }}"
-               style="background-image: url({{ item.image_url }}); height: 100px; width: 250px"></div>
+               style="background-image: url({{ item.image_url }}); height: 100px"></div>
         </a>
 
       </div>
