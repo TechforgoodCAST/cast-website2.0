@@ -1,0 +1,30 @@
+---
+layout: default
+permalink: /contact
+nav_highlight: contact
+---
+
+<div class="bg-hello cover bg-center ph5 pv6">
+  <div class="bg-navy pv3 ph4 mw6 ml4-ns">
+    <h2 class="teal">Talk to us, read our blog, connect on LinkedIn, follow our tweets...</h2>
+  </div>
+</div>
+
+<div class="mw7 center pv5">
+  <h2 class="teal f3 tc mt0">Want to say hello?</h2>
+
+  {% assign social_channels = site.data.social_channels %}
+
+  {% assign email    = social_channels | where: "name", "hello@wearecast.org.uk" | first  %}
+  {% assign twitter  = social_channels | where: "name", "twitter" | first  %}
+  {% assign linkedin = social_channels | where: "name", "linkedin" | first  %}
+  {% assign medium   = social_channels | where: "name", "medium" | first  %}
+
+  {% include social.html channel=email %}
+
+  <div class="flex flex-wrap mt5">
+    {% include social.html channel=twitter %}
+    {% include social.html channel=linkedin %}
+    {% include social.html channel=medium %}
+  </div>
+</div>

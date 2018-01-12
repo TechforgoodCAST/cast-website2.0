@@ -43,7 +43,8 @@ data = [
     image_alt: item.image.alt,
     image_title: item.image.title,
     link: item.link,
-    name: item.name }
+    name: item.name,
+    description: item.description }
   },
   dato.bespoke_project_orgs.map { |item| {
     image_url: YamlHelper.add_origin(item.image.path),
