@@ -40,7 +40,7 @@ nav_highlight: home
 </div>
 
 <div class="bg-teal ph3 pv4">
-  <h2 class="white tc">Are you a charity or a funder?</h2>
+  <h2 class="white f3 tc">Are you a charity or a funder?</h2>
 
   <div class="mw7 center flex flex-wrap">
     <div class="w-100 w-50-ns pa2">
@@ -72,7 +72,7 @@ nav_highlight: home
 </div>
 
 <div class="mw7 center">
-  <h2 class="teal tc">What we believe</h2>
+  <h2 class="teal f3 tc">What we believe</h2>
 
   <div class="measure center">
     <p class="silver tc">{{ site.data.home_text.what_we_believe }}</p>
@@ -96,16 +96,16 @@ nav_highlight: home
   </div>
 </div>
 
-<div class="tc ph4 pv5">
-  <a class="dib br2 fw7 f6 bg-animate hover-white hover-bg-red no-underline red ba2 b--red pa2"
+<div class="tc ph4 pv5 mw6 center">
+  {% include inverted_button.html
+     text="Read the blog post 'Six Tenets of Tech for Good'"
+     link="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87"
      target="_blank"
-     href="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87">
-    Read the blog post "Six Tenets of Tech for Good"
-  </a>
+  %}
 </div>
 
 <div class="bg-drawing-board bg-bottom cover pt4 pb5">
-  <h2 class="white tc pb5 pt0">Supporters and Funders</h2>
+  <h2 class="white f3 tc mt3 mb4 pt0">Supporters and Funders</h2>
 
   <div class="flex flex-wrap pv4 mw7 center bg-white">
     {% for item in site.data.supporters_and_funders %}

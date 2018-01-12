@@ -38,6 +38,14 @@ p {
   width: calc(100% / 6);
 }
 
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
 @media (--breakpoint-large) {
   .w-16-l { width: calc(100% / 6); }
 }

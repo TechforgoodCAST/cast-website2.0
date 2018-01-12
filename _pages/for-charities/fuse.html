@@ -14,7 +14,7 @@ nav_highlight: for-charities
   </div>
 
   <div class="w-100 w-50-ns pv4 ph3">
-    <h2 class="teal">Fuse</h2>
+    <h2 class="teal f3">Fuse</h2>
     <div class="gray">{{ fuse_text.headline | markdownify }}</div>
     <p class="f7">next cohort starts in 2018</p>
   </div>
@@ -35,7 +35,7 @@ nav_highlight: for-charities
 </div>
 
 <div class="mw7 center">
-  <h2 class="teal tc mv4">What you'll be doing</h2>
+  <h2 class="teal f3 tc mv4">What you'll be doing</h2>
 
   <div class="flex flex-wrap overflow-hidden">
     {% for item in fuse_text.weeks %}
@@ -64,7 +64,7 @@ nav_highlight: for-charities
     {% endfor %}
   </div>
 
-  <div class="mw6 tc center mt4 pa2">
+  <div class="mw6 f4 tc center mt4 pa2">
     {% include button.html text="Download the Fuse programme guide" %}
   </div>
 </div>
@@ -81,7 +81,7 @@ nav_highlight: for-charities
 </div>
 
 <div class="mw7 center mv4">
-  <h2 class="teal tc">Fuse Alumni</h2>
+  <h2 class="teal f3 tc">Fuse Alumni</h2>
 
   <div class="flex flex-wrap mb5">
     {% for item in site.data.fuse_alumni %}
@@ -93,7 +93,7 @@ nav_highlight: for-charities
 
   {% assign comic = site.data.logos.funded_by_comic %}
   {% assign blf   = site.data.logos.big_lottery_fund %}
-  <h2 class="teal tc">Fuse is funded by</h2>
+  <h2 class="teal f3 tc">Fuse is funded by</h2>
   <div class="flex mw6 center">
       <a href="{{ comic.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ comic.image_url }}); height: 100px"></a>
       <a href="{{ blf.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ blf.image_url }}); height: 100px"></a>
@@ -102,7 +102,7 @@ nav_highlight: for-charities
 
 <div class="bg-flowchart bg-center cover pt4 pb5">
   <div class="mw7 center">
-    <h2 class="white tc mb5">Fuse success stories</h2>
+    <h2 class="white f3 tc mb5">Fuse success stories</h2>
 
     {% assign success = fuse_text.success_stories %}
 
@@ -129,11 +129,11 @@ nav_highlight: for-charities
 </div>
 
 <div class="mw7 center pt4 pb5">
-  <h2 class="teal tc">Want to take your organisation through Fuse?</h2>
+  <h2 class="teal f3 tc">Want to take your organisation through Fuse?</h2>
   <div class="measure center tc">
     <p class="f5 fw7">{{ fuse_text.unavailable_message.head }}</p>
     <p>{{ fuse_text.unavailable_message.sub }}</p>
-    <div class="ph4">
+    <div class="ph4 f4">
       {% include button.html text="Get in touch about Fuse" link="mailto:hello@wearecast.org.uk?subject=fuse enquiry" %}
     </div>
   </div>

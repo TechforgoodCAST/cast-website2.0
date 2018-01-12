@@ -5,5 +5,6 @@ node_modules
 
 _data/social_channels.yml
 _data/supporters_and_funders.yml
+_data/clients_and_supporters.yml
 _data/fuse_alumni.yml
 _data/bespoke_project_orgs.yml

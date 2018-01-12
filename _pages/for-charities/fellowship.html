@@ -14,7 +14,7 @@ nav_highlight: for-charities
   </div>
 
   <div class="w-100 w-50-ns pv4 ph3">
-    <h2 class="teal">Digital Fellowship</h2>
+    <h2 class="teal f3">Digital Fellowship</h2>
     <div class="gray">{{ fellowship_text.headline | markdownify }}</div>
     <p class="f7">next cohort starts in 2018</p>
   </div>
@@ -35,7 +35,7 @@ nav_highlight: for-charities
 </div>
 
 <div class="mw7 center">
-  <h2 class="teal tc mv4">What you'll be doing</h2>
+  <h2 class="teal f3 tc mv4">What you'll be doing</h2>
 
   <div class="flex flex-wrap overflow-hidden">
     {% for item in fellowship_text.weeks %}
@@ -64,7 +64,7 @@ nav_highlight: for-charities
     {% endfor %}
   </div>
 
-  <div class="mw6 tc center mt4 pa2">
+  <div class="mw6 f4 tc center mt4 pa2">
     {% include button.html text="Download the Digital Fellowship guide" %}
   </div>
 </div>
@@ -82,16 +82,16 @@ nav_highlight: for-charities
 
 <div class="bg-flowchart bg-center cover pt4 pb5">
   <div class="mw7 center">
-    <h2 class="white tc mb5">Watch the video of the Fellows' thoughts on the programme</h2>
+    <h2 class="white f3 tc mb5">Watch the video of the Fellows' thoughts on the programme</h2>
   </div>
 </div>
 
 <div class="mw7 center pt4 pb5">
-  <h2 class="teal tc">Interested in the Fellowship?</h2>
+  <h2 class="teal f3 tc">Interested in the Fellowship?</h2>
   <div class="measure center tc">
     <p class="f5 fw7">{{ fellowship_text.unavailable_message.head }}</p>
     <p>{{ fellowship_text.unavailable_message.sub }}</p>
-    <div class="ph4">
+    <div class="ph4 f4">
       {% include button.html text="Get in touch about the Fellowship" link="mailto:hello@wearecast.org.uk?subject=fellowship enquiry" %}
     </div>
   </div>

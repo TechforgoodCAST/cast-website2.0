@@ -15,6 +15,7 @@ end
 
 paths = YamlHelper.file_paths([
   "supporters_and_funders",
+  "clients_and_supporters",
   "social_channels",
   "bespoke_project_orgs",
   "fuse_alumni"
@@ -22,6 +23,13 @@ paths = YamlHelper.file_paths([
 
 data = [
   dato.supporter_funders.map { |item| {
+    image_url: YamlHelper.add_origin(item.image.path),
+    image_alt: item.image.alt,
+    image_title: item.image.title,
+    name: item.name,
+    link: item.link }
+  },
+  dato.client_supporters.map { |item| {
     image_url: YamlHelper.add_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
