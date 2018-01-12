@@ -1,6 +1,6 @@
 <div class="bg-teal pt4 pb5">
 
-  <div class="mw7 center flex flex-wrap">
+  <div class="mw7 center ph4 ph2-ns flex flex-wrap">
 
     <div class="w-100 w-30-ns">
       <div class="mw4 w-100">
@@ -23,7 +23,7 @@
       {% include newsletter_form.html %}
     </div>
 
-    <div class="w-100 w-10-ns mt4 tc flex flex-column items-center">
+    <div class="w-100 w-10-ns mt4 tc flex flex-column-ns justify-between items-center">
       {% for item in site.data.social_channels %}
         <a href="{{ item.link }}"
            title="{{ item.image_title }}"

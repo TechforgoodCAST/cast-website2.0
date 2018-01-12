@@ -92,7 +92,7 @@ nav_highlight: for-charities
   <div class="mw7 center">
     <h2 class="ma0 pv5 tc fw7 f3">Bespoke Consultancy</h2>
 
-    <div class="flex flex-wrap white tc overflow-hidden">
+    <div class="flex flex-wrap white tc overflow-hidden ph1">
       <div class="w-100 w-33-ns ph2">
         <div class="bg-gold pa3 equal-height-column">
           <h3>Who?</h3>
@@ -115,17 +115,19 @@ nav_highlight: for-charities
       </div>
     </div>
 
-    <div class="bg-white mt4 pv3">
-      <p class="tc fw7">A few of the charities who have worked with us on tailor-made projects</p>
+    <div class="ph3 mt4">
+      <div class="bg-white pv3">
+        <p class="tc fw7">A few of the charities who have worked with us on tailor-made projects</p>
 
-      <div class="flex flex-wrap">
-        {% for item in site.data.bespoke_project_orgs %}
+        <div class="flex flex-wrap">
+          {% for item in site.data.bespoke_project_orgs %}
 
-          <div class="w-33-ns w-100 ph5-m ph3 pb4 pt3">
-            <a href="{{ item.link }}" target="_blank" class="db bg-center contain mw4 center" style="background-image: url({{ item.image_url }}); height: 100px"></a>
-          </div>
+            <div class="w-33-ns w-100 ph5-m ph3 pb4 pt3">
+              <a href="{{ item.link }}" target="_blank" class="db bg-center contain mw4 center" style="background-image: url({{ item.image_url }}); height: 100px"></a>
+            </div>
 
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
