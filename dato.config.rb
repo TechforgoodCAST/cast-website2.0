@@ -18,7 +18,9 @@ paths = YamlHelper.file_paths([
   "clients_and_supporters",
   "social_channels",
   "bespoke_project_orgs",
-  "fuse_alumni"
+  "fuse_alumni",
+  "team",
+  "board"
 ])
 
 data = [
@@ -57,6 +59,17 @@ data = [
     link: item.link,
     name: item.name }
   },
+  dato.teams.map { |item| {
+    image_url: YamlHelper.add_origin(item.image.path),
+    name: item.name,
+    job_title: item.job_title,
+    description: item.description }
+  },
+  dato.boards.map { |item| {
+    image_url: YamlHelper.add_origin(item.image.path),
+    name: item.name,
+    description: item.description }
+  }
 ]
 
 paths.zip(data).map do |xs|
