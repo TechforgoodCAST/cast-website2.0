@@ -81,7 +81,7 @@ data = [
 ]
 
 # creates yaml files for each collection of data
-data.each do |xs|
-  file = YamlHelper.to_file_path(xs[:file_name])
-  create_data_file(file, :yaml, xs[:data])
+data.each do |collection|
+  file = YamlHelper.to_file_path(collection[:file_name])
+  create_data_file(file, :yaml, collection[:data])
 end
