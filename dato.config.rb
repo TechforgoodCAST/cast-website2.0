@@ -1,5 +1,5 @@
 module YamlHelper
-  def YamlHelper.add_origin(path)
+  def YamlHelper.dato_origin(path)
     "https://www.datocms-assets.com" + path
   end
 
@@ -25,21 +25,21 @@ paths = YamlHelper.file_paths([
 
 data = [
   dato.supporter_funders.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
     name: item.name,
     link: item.link }
   },
   dato.client_supporters.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
     name: item.name,
     link: item.link }
   },
   dato.social_channels.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
     link: item.link,
@@ -47,27 +47,27 @@ data = [
     description: item.description }
   },
   dato.bespoke_project_orgs.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
     name: item.name,
     link: item.link }
   },
   dato.fuse_alumnis.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     image_alt: item.image.alt,
     image_title: item.image.title,
     link: item.link,
     name: item.name }
   },
   dato.teams.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     name: item.name,
     job_title: item.job_title,
     description: item.description }
   },
   dato.boards.map { |item| {
-    image_url: YamlHelper.add_origin(item.image.path),
+    image_url: YamlHelper.dato_origin(item.image.path),
     name: item.name,
     description: item.description }
   }

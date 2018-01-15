@@ -8,9 +8,9 @@ nav_highlight: for-charities
 
 <div class="mw7 center mt3 mb4 flex">
   <div class="w-100 w-50-ns pv4 ph3">
-    <div class="bg-center contain"
-         style="background-image: url({{ site.data.logos.fellowship }}); height: 204px">
-    </div>
+    {% include image_block.html
+       image=site.data.logos.fellowship
+       height="204px" %}
   </div>
 
   <div class="w-100 w-50-ns pv4 ph3">
@@ -91,8 +91,12 @@ nav_highlight: for-charities
   <div class="measure center tc">
     <p class="f5 fw7">{{ fellowship_text.unavailable_message.head }}</p>
     <p>{{ fellowship_text.unavailable_message.sub }}</p>
+
     <div class="ph4 f4">
-      {% include button.html text="Get in touch about the Fellowship" link="mailto:hello@wearecast.org.uk?subject=fellowship enquiry" %}
+      {% include button.html
+         text="Get in touch about the Fellowship"
+         link="mailto:hello@wearecast.org.uk?subject=fellowship enquiry" %}
     </div>
+
   </div>
 </div>

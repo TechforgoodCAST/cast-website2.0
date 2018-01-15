@@ -25,7 +25,8 @@ nav_highlight: partners-and-network
           {% include inverted_button.html
              text=item.cta
              link=item.link
-             target="_blank" %}
+             alt=item.alt
+             external="true" %}
         </div>
       </div>
     {% endfor %}
@@ -39,9 +40,16 @@ nav_highlight: partners-and-network
 
     <div class="flex flex-wrap mt4 mb5 pa4 bg-white">
       {% for item in site.data.clients_and_supporters %}
+
         <div class="w-50 w-25-ns pa3">
-          <a href="{{ item.link }}" target="_blank" alt="{{ item.name }}" class="bg-center contain db" style="background-image: url({{ item.image_url }}); height: 100px"></a>
+          {% include image_block_link.html
+             link=item.link
+             image=item.image_url
+             alt=item.alt
+             height="100px"
+             external="true" %}
         </div>
+
       {% endfor %}
     </div>
   </div>

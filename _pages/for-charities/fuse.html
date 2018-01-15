@@ -8,9 +8,10 @@ nav_highlight: for-charities
 
 <div class="mw7 center mt3 mb4 flex">
   <div class="w-100 w-50-ns pv4 ph3">
-    <div class="bg-center contain"
-         style="background-image: url({{ site.data.logos.fuse }}); height: 204px">
-    </div>
+    {% include image_block.html
+       image=site.data.logos.fuse
+       alt="fuse"
+       height="204px" %}
   </div>
 
   <div class="w-100 w-50-ns pv4 ph3">
@@ -48,15 +49,17 @@ nav_highlight: for-charities
 
         <div class="z-0 relative" style="margin-top: -50px">
           <div class="bg-light-gray pt4 equal-height-column">
+
             <p class="f4 fw7 ttu mt4 teal">Key activities</p>
             {% for activity in item.key_activities %}
-            <p class="f6">{{ activity }}</p>
+              <p class="f6">{{ activity }}</p>
             {% endfor %}
 
             <p class="f4 fw7 ttu teal">Main outputs</p>
             {% for output in item.main_outputs %}
-            <p class="f6">{{ output }}</p>
+              <p class="f6">{{ output }}</p>
             {% endfor %}
+
           </div>
         </div>
       </div>
@@ -86,7 +89,15 @@ nav_highlight: for-charities
   <div class="flex flex-wrap mb5">
     {% for item in site.data.fuse_alumni %}
       <div class="w-50 w-25-ns pa3">
-        <a href="{{ item.link }}" target="_blank" alt="{{ item.name }}" class="bg-center contain db" style="background-image: url({{ item.image_url }}); height: 100px"></a>
+
+        {% include image_block_link.html
+           link=item.link
+           image=item.image_url
+           alt=item.alt
+           height="100px"
+           external="true"
+        %}
+
       </div>
     {% endfor %}
   </div>
@@ -95,8 +106,25 @@ nav_highlight: for-charities
   {% assign blf   = site.data.logos.big_lottery_fund %}
   <h2 class="teal f3 tc">Fuse is funded by</h2>
   <div class="flex mw6 center">
-      <a href="{{ comic.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ comic.image_url }}); height: 100px"></a>
-      <a href="{{ blf.link }}" target="_blank" class="w-50 db bg-center contain" style="background-image: url({{ blf.image_url }}); height: 100px"></a>
+    <div class="w-50">
+      {% include image_block_link.html
+         link=comic.link
+         image=comic.image_url
+         alt="comic relief"
+         height="100px"
+         external="true"
+      %}
+    </div>
+
+    <div class="w-50">
+      {% include image_block_link.html
+         link=blf.link
+         image=blf.image_url
+         alt="big lottery fund"
+         height="100px"
+         external="true"
+      %}
+    </div>
   </div>
 </div>
 
@@ -109,7 +137,10 @@ nav_highlight: for-charities
     <div class="flex flex-wrap">
       <div class="w-100 w-50-ns">
         <div class="ph4 pb4 bg-white">
-          <div class="bg-center contain" style="background-image: url({{ site.data.logos.age_uk }}); height: 200px"></div>
+          {% include image_block.html
+             image=site.data.logos.age_uk
+             alt="age uk"
+             height="200px" %}
           <p class="ttu fw7">Case study</p>
           <p class="fw7">Age UK</p>
           <div>{{ success.age_uk | markdownify }}</div>
@@ -118,7 +149,10 @@ nav_highlight: for-charities
 
       <div class="w-100 w-50-ns">
         <div class="ph4 pb4 bg-white">
-          <div class="bg-center contain" style="background-image: url({{ site.data.logos.action_for_children }}); height: 200px"></div>
+          {% include image_block.html
+             image=site.data.logos.action_for_children
+             alt="action for children"
+             height="200px" %}
           <p class="ttu fw7">Case study</p>
           <p class="fw7">Action for children</p>
           <div>{{ success.action_for_children | markdownify }}</div>

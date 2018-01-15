@@ -1,0 +1,13 @@
+{% if include.external == "true" %}
+  {% assign target = "_blank" %}
+{% else condition %}
+  {% assign target = "" %}
+{% endif %}
+
+<a
+  class="db bg-center contain"
+  href="{{ include.link }}"
+  target="{{ target }}"
+  alt="{{ include.alt }}"
+  style="background-image: url({{ include.image }}); height: {{ include.height }}">
+</a>

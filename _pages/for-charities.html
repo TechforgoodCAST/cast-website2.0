@@ -19,9 +19,11 @@ nav_highlight: for-charities
     {% endcapture %}
 
     <div class="measure w-100 w-50-ns ph3 tc mb5 equal-height-column flex flex-column justify-between">
-      <a href="{{ fuse_link }}"
-         class="bg-center contain db"
-         style="background-image: url({{ site.data.logos.fuse }}); height: 100px"></a>
+      {% include image_block_link.html
+         link=fuse_link
+         image=site.data.logos.fuse
+         alt="fuse"
+         height="100px" %}
 
       <h3 class="teal fw4 tc">The world's first only non profit technology accelerator</h3>
       <div>{{ site.data.for_charities_text.fuse_blurb | markdownify }}</div>
@@ -35,9 +37,11 @@ nav_highlight: for-charities
     {% endcapture %}
 
     <div class="measure w-100 w-50-ns ph3 tc mb5 equal-height-column flex flex-column justify-between">
-      <a href="{{ fellowship_link }}"
-         class="bg-center contain db"
-         style="background-image: url({{ site.data.logos.fellowship }}); height: 100px"></a>
+      {% include image_block_link.html
+         link=fellowship_link
+         image=site.data.logos.fellowship
+         alt="fellowship"
+         height="100px" %}
 
       <h3 class="teal fw4 tc">Helping nonprofit senior leaders and CEOs understand digital</h3>
       <div>{{ site.data.for_charities_text.fellowship_blurb | markdownify }}</div>
@@ -123,7 +127,14 @@ nav_highlight: for-charities
           {% for item in site.data.bespoke_project_orgs %}
 
             <div class="w-33-ns w-100 ph5-m ph3 pb4 pt3">
-              <a href="{{ item.link }}" target="_blank" class="db bg-center contain mw4 center" style="background-image: url({{ item.image_url }}); height: 100px"></a>
+
+              {% include image_block_link.html
+                 link=item.link
+                 image=item.image_url
+                 alt=item.alt
+                 height="100px"
+                 external="true" %}
+
             </div>
 
           {% endfor %}

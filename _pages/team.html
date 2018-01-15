@@ -15,12 +15,18 @@ nav_highlight: team
 
   <div class="flex flex-wrap">
     {% for item in site.data.team %}
+
       <div class="w-50 w-25-ns tc mb4">
-        <div class="bg-center contain w-100" style="background-image: url({{ item.image_url }}); height: 100px"></div>
+        {% include image_block.html
+           image=item.image_url
+           alt=item.name
+           height="100px" %}
+
         <h3 class="teal mb2">{{ item.name }}</h3>
         <h4 class="teal f7 ttu mt0">{{ item.job_title }}</h4>
         <p>{{ item.description }}</p>
       </div>
+
     {% endfor %}
   </div>
 </div>
@@ -31,11 +37,16 @@ nav_highlight: team
 
     <div class="flex flex-wrap bg-white pa5-ns pa4 mb5">
       {% for item in site.data.board %}
+
         <div class="w-50 w-33-ns tc mb4">
-          <div class="bg-center contain w-100" style="background-image: url({{ item.image_url }}); height: 100px"></div>
+          {% include image_block.html
+             image=item.image_url
+             alt=item.name
+             height="100px" %}
           <h3 class="teal mb2">{{ item.name }}</h3>
           <p>{{ item.description }}</p>
         </div>
+
       {% endfor %}
     </div>
   </div>

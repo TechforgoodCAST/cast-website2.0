@@ -60,7 +60,12 @@
         <h2 class="teal">We work with funders</h2>
         <p class="silver">{{ site.data.home_text.we_work_with_funders }}<p>
         <div class="mw4 center mb4">
-          {% include button.html text="I am a funder" link="/for-funders" %}
+
+          {% capture funders_link %}
+            {% link _pages/for-charities.html %}
+          {% endcapture %}
+
+          {% include button.html text="I am a funder" link=funders_link %}
         </div>
       </div>
     </div>
@@ -96,7 +101,7 @@
   {% include inverted_button.html
      text="Read the blog post 'Six Tenets of Tech for Good'"
      link="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87"
-     target="_blank"
+     external="true"
   %}
 </div>
 
@@ -107,12 +112,12 @@
     {% for item in site.data.supporters_and_funders %}
       <div class="w-50 w-33-ns ph3 pv4">
 
-        <a class="db" href="{{ item.link }}" target="_blank">
-          <div class="bg-center contain"
-               title="{{ item.image_title }}"
-               alt="{{ item.image_alt }}"
-               style="background-image: url({{ item.image_url }}); height: 100px"></div>
-        </a>
+        {% include image_block_link.html
+           link=item.link
+           image=item.image_url
+           alt=item.alt
+           external="true"
+           height="100px" %}
 
       </div>
     {% endfor %}
