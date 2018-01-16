@@ -1,32 +1,41 @@
-<nav class="flex justify-between items-center bg-teal white">
+<nav class="flex-m justify-between items-center bg-teal white">
 
-  <a href="{{ site.url }}" class="db w-25 ml3">
-    <div class="bg-left contain" style="background-image: url({{ site.logo_url }}); height: 90px"></div>
+  <a href="{{ site.url }}" class="db ml3">
+    <div class="bg-left contain" style="background-image: url({{ site.logo_url }}); height: 90px; width: 193px"></div>
   </a>
 
-  <ul class="mr3">
-    {% for title in site.data.nav_titles %}
+  <ul class="mr3 dn db-m">
+    {% for item in site.data.nav_titles %}
 
-      <!-- css class to determine which menu item is highlighted  -->
-      {% if page.nav_highlight == title.url %}
+      {% if page.nav_highlight == item.url %}
         {% assign highlight_class = "menu-highlight" %}
       {% else %}
         {% assign highlight_class = "" %}
       {% endif %}
 
-      <!-- rewrite home as "/"  -->
-      {% if title.url == "home" %}
-        {% assign url = "" %}
-      {% else %}
-        {% assign url = title.url %}
-      {% endif %}
-
       <li class="dib">
         <a class="white no-underline relative hover-menu-highlight {{ highlight_class }} mh2 f6"
-           href="/{{ url }}">{{ title.title }}</a>
+           href="{{ item.url }}">{{ item.title }}</a>
       </li>
 
     {% endfor %}
   </ul>
 
+  <ul mobile-nav class="pl3 pt4 pb3 dn dn-m">
+    {% for item in site.data.nav_titles %}
+
+      {% if page.nav_highlight == item.url %}
+        {% assign highlight_class = "menu-highlight" %}
+      {% else %}
+        {% assign highlight_class = "" %}
+      {% endif %}
+
+      <li class="db pb3">
+        <a class="white no-underline relative hover-menu-highlight {{ highlight_class }} mh2 f6"
+           href="{{ item.url }}">{{ item.title }}</a>
+      </li>
+
+    {% endfor %}
+  </ul>
+  {% include hamburger.html %}
 </nav>
