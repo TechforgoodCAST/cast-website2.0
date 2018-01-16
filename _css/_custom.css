@@ -150,27 +150,27 @@ ul {
 
 /* hamburger */
 
-.open .upper {
+div[open] .upper {
   transform: translateY(5px) rotateZ(135deg);
 }
 
-.open .middle {
+div[open] .middle {
   opacity: 0;
 }
 
-.open .lower {
+div[open] .lower {
   transform: translateY(-7px) rotateZ(-135deg);
 }
 
 
-.closed .upper {
+div[closed] .upper {
   transform: translateY(0) rotateZ(0);
 }
 
-.closed .middle {
+div[closed] .middle {
   opacity: 1;
 }
 
-.closed .lower {
+div[closed] .lower {
   transform: translateY(0) rotateZ(0);
 }

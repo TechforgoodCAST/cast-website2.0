@@ -1,14 +1,15 @@
 var Hamburger = (function () {
 
-  var hamburgerAttribute  = '[hamburger]'
-  var mobileMenuAttribute = '[mobile-nav]'
-  var openClass    = 'open'
-  var closedClass  = 'closed'
+  var hamburgerAttribute  = 'hamburger'
+  var mobileMenuAttribute = 'mobile-nav'
+  var openAttribute       = 'open'
+  var closedAttribute     = 'closed'
+
   var displayBlock = 'db'
   var displayNone  = 'dn'
 
   function addListener () {
-    getHamburger().addEventListener('click', toggle)
+    $hamburger().addEventListener('click', toggle)
   }
 
   function toggle () {
@@ -18,38 +19,42 @@ var Hamburger = (function () {
   }
 
   function isOpen () {
-    return getHamburger().classList.contains(openClass)
+    return $hamburger().getAttribute(openAttribute)
   }
 
   function open () {
-    var $hb = getHamburger()
-    var $mn = getMenu()
-
-    $hb.classList.add(openClass)
-    $hb.classList.remove(closedClass)
-
-    $mn.classList.add(displayBlock)
-    $mn.classList.remove(displayNone)
+    swapAttributes($hamburger(), openAttribute, closedAttribute)
+    swapClasses($menu(), displayBlock, displayNone)
   }
 
   function close () {
-    var $hb = getHamburger()
-    var $mn = getMenu()
-
-    $hb.classList.add(closedClass)
-    $hb.classList.remove(openClass)
-
-    $mn.classList.add(displayNone)
-    $mn.classList.remove(displayBlock)
+    swapAttributes($hamburger(), closedAttribute, openAttribute)
+    swapClasses($menu(), displayNone, displayBlock)
   }
 
-  function getHamburger () {
-    return document.querySelector(hamburgerAttribute)
+  function swapAttributes ($el, atr1, atr2) {
+    $el.setAttribute(atr1, true)
+    $el.removeAttribute(atr2)
   }
 
-  function getMenu () {
-    return document.querySelector(mobileMenuAttribute)
+  function swapClasses ($el, cx1, cx2) {
+    $el.classList.add(cx1)
+    $el.classList.remove(cx2)
   }
 
-  return { addListener: addListener }
+  function $hamburger () {
+    return document.querySelector(toAttribute(hamburgerAttribute))
+  }
+
+  function $menu () {
+    return document.querySelector(toAttribute(mobileMenuAttribute))
+  }
+
+  function toAttribute (attr) {
+    return '[' + attr + ']'
+  }
+
+  return {
+    addListener: addListener
+  }
 }())
