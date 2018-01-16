@@ -1,12 +1,12 @@
 - title: Home
-  url: home
+  url: /
 - title: For Charities
-  url: for-charities
+  url: /for-charities
 - title: For Funders
-  url: for-funders
+  url: /for-funders
 - title: Partners and Network
-  url: partners-and-network
+  url: /partners-and-network
 - title: Team
-  url: team
+  url: /team
 - title: Contact
-  url: contact
+  url: /contact

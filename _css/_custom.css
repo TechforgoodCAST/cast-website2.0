@@ -14,6 +14,11 @@ p {
   font-size: var(--font-size-6);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 
 /* utilities */
 
@@ -140,4 +145,32 @@ p {
   height: 23px;
   width: 23px;
   border-radius: 100%;
+}
+
+
+/* hamburger */
+
+.open .upper {
+  transform: translateY(5px) rotateZ(135deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .lower {
+  transform: translateY(-7px) rotateZ(-135deg);
+}
+
+
+.closed .upper {
+  transform: translateY(0) rotateZ(0);
+}
+
+.closed .middle {
+  opacity: 1;
+}
+
+.closed .lower {
+  transform: translateY(0) rotateZ(0);
 }
