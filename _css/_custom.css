@@ -101,9 +101,11 @@ ul {
   background-image: url(https://www.datocms-assets.com/4269/1515770625-hello.jpg);
 }
 
-.bg-audience {
-  background-image: url(https://www.datocms-assets.com/4269/1515770627-audience.jpg);
+.bg-handshake {
+  background-image: url(https://www.datocms-assets.com/4269/1516638432-handshake.jpg);
 }
+
+
 
 .menu-highlight::before,
 .hover-menu-highlight:hover::before {

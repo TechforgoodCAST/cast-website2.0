@@ -20,15 +20,17 @@ nav_highlight: /for-charities
   </div>
 </div>
 
-<div class="bg-navy pt4 pb5">
-  <div class="mw7 center flex white">
+<div class="bg-purple pt4 pb5">
+  <div class="mw7 center flex flex-wrap white">
     <div class="w-100 w-50-ns ph3">
-      <h2>What is the Digital Fellowship?</h2>
+      <h2 class="f4">What is the Digital Fellowship?</h2>
+      <div class="bg-teal mb4" style="height: 3px"></div>
       <div>{{ fellowship_text.what_is_it | markdownify }}</div>
     </div>
 
     <div class="w-100 w-50-ns ph3">
-      <h2>How does it work?</h2>
+      <h2 class="f4">How does it work?</h2>
+      <div class="bg-teal mb4" style="height: 3px"></div>
       <div>{{ fellowship_text.how_does_it_work | markdownify }}</div>
     </div>
   </div>
@@ -37,31 +39,101 @@ nav_highlight: /for-charities
 <div class="mw7 center">
   <h2 class="teal f3 tc mv4">What you'll be doing</h2>
 
-  <div class="flex flex-wrap overflow-hidden">
-    {% for item in fellowship_text.weeks %}
+  <div class="tc measure center">{{ fellowship_text.what_youll_be_doing | markdownify }}</div>
 
-      <div class="w-100 w-33-ns tc pa2 relative">
-        <div class="white bg-purple left-0 right-0 relative z-5 circle-medium center flex flex-column justify-center">
-          <p class="f5 ma0">WEEKS</p>
-          <p class="f3 ma0">{{ item.range }}</p>
+  <div class="flex flex-wrap overflow-hidden">
+    {% for item in fellowship_text.required.stages %}
+
+      <div class="w-100 w-50-ns tc pa2 relative">
+        <div class="white bg-green left-0 right-0 relative z-5 circle-medium center flex flex-column justify-center">
+          <p class="f3 ma0 fw7">{{ forloop.index }}</p>
+          <p class="f6 ma0">Required</p>
         </div>
 
         <div class="z-0 relative" style="margin-top: -50px">
-          <div class="bg-light-gray pt4 equal-height-column">
-            <p class="f4 fw7 ttu mt4 teal">Key activities</p>
-            {% for activity in item.key_activities %}
-            <p class="f6">{{ activity }}</p>
-            {% endfor %}
-
-            <p class="f4 fw7 ttu teal">Main outputs</p>
-            {% for output in item.main_outputs %}
-            <p class="f6">{{ output }}</p>
-            {% endfor %}
+          <div class="bg-light-gray pt5 equal-height-column pa3">
+            <p class="f5 tc teal ttu fw7">{{ item.title }}</p>
+            <div class="">{{ item.text | markdownify }}</div>
           </div>
         </div>
       </div>
 
     {% endfor %}
+  </div>
+  <div class="overflow-hidden ph2 mt3">
+    <div class="bg-light-gray w-100">
+      <p class="f5 tc teal ttu fw7 ma0 pt4">Outcomes</p>
+
+
+      <div class="flex flex-wrap">
+        <div class="w-100 w-50-ns ph4 pb4">
+          <p class="fw7 f5">Fellows will gain</p>
+          <ul class="pl4">
+            {% for item in fellowship_text.required.outcomes.fellow %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="w-100 w-50-ns ph4 pb4">
+          <p class="fw7 f5">In addition, their organisations will gain</p>
+          <ul class="pl4">
+            {% for item in fellowship_text.required.outcomes.organisation %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="flex flex-wrap overflow-hidden mt5">
+    {% for item in fellowship_text.optional.stages %}
+
+      <div class="w-100 w-50-ns tc pa2 relative">
+        <div class="white bg-gold left-0 right-0 relative z-5 circle-medium center flex flex-column justify-center">
+          <p class="f3 ma0 fw7">{{ forloop.index | plus: 2 }}</p>
+          <p class="f6 ma0">Optional</p>
+        </div>
+
+        <div class="z-0 relative" style="margin-top: -50px">
+          <div class="bg-light-gray pt5 equal-height-column pa3">
+            <p class="f5 tc teal ttu fw7">{{ item.title }}</p>
+            <div class="">{{ item.text | markdownify }}</div>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+  <div class="overflow-hidden ph2 mt3">
+    <div class="bg-light-gray w-100">
+      <p class="f5 tc teal ttu fw7 ma0 pt4">Additional Outcomes</p>
+
+
+      <div class="flex flex-wrap">
+        <div class="w-100 w-50-ns ph4 pb4">
+          <p class="fw7 f5">Fellows will gain</p>
+          <ul class="pl4">
+            {% for item in fellowship_text.optional.outcomes.fellow %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="w-100 w-50-ns ph4 pb4">
+          <p class="fw7 f5">In addition, their organisations will gain</p>
+          <ul class="pl4">
+            {% for item in fellowship_text.optional.outcomes.organisation %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="mw6 f4 tc center mt4 pa2">
@@ -71,18 +143,18 @@ nav_highlight: /for-charities
   </div>
 </div>
 
-<div class="bg-postit-2 bg-center cover mt5">
+<div class="bg-handshake bg-center cover mt5">
   <div class="mw7 center pv4">
     <div class="bg-white mw6 pa4">
       <p class="f1 absolute ma0 silver" style="margin-top: -2.5rem">“</p>
-      <p>{{ fellowship_text.testimonial.text }} ”</p>
+      <div>{{ fellowship_text.testimonial.text | markdownify }}</div>
       <p class="f7 ma1">{{ fellowship_text.testimonial.name }}</p>
       <p class="f7 ma1">{{ fellowship_text.testimonial.organisation }}</p>
     </div>
   </div>
 </div>
 
-<div class="bg-flowchart bg-center cover pt4 pb5">
+<div class="bg-postit-2 bg-center cover pt4 pb5">
   <div class="mw7 center">
     <h2 class="white f3 tc mb5">Watch the video of the Fellows' thoughts on the programme</h2>
   </div>
