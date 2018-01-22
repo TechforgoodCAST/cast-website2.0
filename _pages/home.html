@@ -35,6 +35,16 @@
   </div>
 </div>
 
+<div class="mw7 center ph3 pt3 pb4">
+  <h2 class="teal f3 tc">How we can help</h2>
+  <p class="measure tc center">{{ site.data.home_text.how_we_can_help }}</p>
+  <div class="mv4">
+    {% include image_block.html
+               image=site.data.logos.how_we_can_help
+               height="200px" %}
+  </div>
+</div>
+
 <div class="bg-teal ph3 pv4">
   <h2 class="white f3 tc">Are you a charity or a funder?</h2>
 
@@ -99,9 +109,9 @@
 
 <div class="tc ph4 pv5 mw6 center">
   {% include inverted_button.html
-     text="Read the blog post 'Six Tenets of Tech for Good'"
-     link="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87"
-     external="true"
+             text="Read the blog post 'Six Tenets of Tech for Good'"
+             link="https://hackernoon.com/six-tenets-of-tech-for-good-210168573f87"
+             external="true"
   %}
 </div>
 
@@ -113,11 +123,11 @@
       <div class="w-50 w-33-ns ph3 pv4">
 
         {% include image_block_link.html
-           link=item.link
-           image=item.image_url
-           alt=item.alt
-           external="true"
-           height="100px" %}
+                   link=item.link
+                   image=item.image_url
+                   alt=item.alt
+                   external="true"
+                   height="100px" %}
 
       </div>
     {% endfor %}

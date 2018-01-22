@@ -1,0 +1,65 @@
+---
+layout: default
+permalink: /for-funders
+nav_highlight: /for-funders
+---
+
+{% assign funders_text = site.data.for_funders_text %}
+
+<div class="bg-all-hands cover bg-top ph5 pv6">
+  <div class="bg-navy pv3 ph4 mw6 ml4-ns">
+    <h2 class="teal">Helping funders devise, plan and run their digital-focussed programmes for nonprofits</h2>
+  </div>
+</div>
+
+<div class="mw7 center pv4">
+  <h2 class="teal f3 tc">Building Programmes</h2>
+  <p class="measure tc center">{{ funders_text.building_programmes }}</p>
+</div>
+
+<div class="bg-navy pt4 pb5">
+  <h2 class="white f3 tc">Helping run funded programmes</h2>
+
+  <div class="mw7 center bg-white mt5 pt4 pb5">
+    <div class="measure center">
+
+      <div class="tc">{{ funders_text.funded_programmes.headline | markdownify }}</div>
+      {% include image_block.html
+        image=site.data.logos.funded_by_comic.image_url
+        height="100px" %}
+      <p class="ttu fw7">Case study</p>
+      <p class="fw7">Comic Relief</p>
+      <div>{{ funders_text.funded_programmes.case_study | markdownify }}</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="bg-postit-1 bg-center cover pv4">
+  <h2 class="navy tc f3">Building your own digital capabilities</h2>
+
+  <div class="mw7 center bg-white mt5 pv4">
+    <div class="measure center">
+
+      <div class="tc">{{ funders_text.digital_capabilities.headline | markdownify }}</div>
+      {% include image_block.html
+                 image=site.data.logos.esmee
+                 height="100px" %}
+      <p class="ttu fw7">Case study</p>
+      <p class="fw7">Esmée Fairbairn</p>
+      <div>{{ funders_text.digital_capabilities.case_study | markdownify }}</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="mw7 center pt4 pb5">
+  <h2 class="tc f4 mw6 center">Interested in knowing more about how we help funders deliver successful programmes, or any of our other work with funders?</h2>
+
+  <div class="tc mw6 center">
+    {% include button.html
+               text="Get in touch"
+               inline="true"
+               link="mailto: hello@wearecast.org.uk?subject=funder enquiry" %}
+  </div>
+</div>

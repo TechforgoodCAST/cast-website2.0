@@ -105,6 +105,9 @@ ul {
   background-image: url(https://www.datocms-assets.com/4269/1515770627-audience.jpg);
 }
 
+.social-hover:hover h3 {
+  color: var(--red);
+}
 
 .menu-highlight::before,
 .hover-menu-highlight:hover::before {
