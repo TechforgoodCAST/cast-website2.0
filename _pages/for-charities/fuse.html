@@ -140,7 +140,7 @@ nav_highlight: /for-charities
                      height="200px" %}
 
           <p class="ttu fw7">Case study</p>
-          <p class="fw7">Age UK</p>
+          <p class="fw7 f4">Age UK</p>
           <div>{{ success.age_uk | markdownify }}</div>
         </div>
       </div>
@@ -153,7 +153,7 @@ nav_highlight: /for-charities
                      height="200px" %}
 
           <p class="ttu fw7">Case study</p>
-          <p class="fw7">Action for children</p>
+          <p class="fw7 f4">Action for children</p>
           <div>{{ success.action_for_children | markdownify }}</div>
         </div>
       </div>
@@ -167,7 +167,10 @@ nav_highlight: /for-charities
     <p class="f5 fw7">{{ fuse_text.unavailable_message.head }}</p>
     <p>{{ fuse_text.unavailable_message.sub }}</p>
     <div class="ph4 f4">
-      {% include button.html text="Get in touch about Fuse" link="mailto:hello@wearecast.org.uk?subject=fuse enquiry" %}
+      {% include button.html
+                 text="Get in touch about Fuse"
+                 link="mailto:hello@wearecast.org.uk?subject=fuse enquiry"
+                 inline="true" %}
     </div>
   </div>
 </div>
