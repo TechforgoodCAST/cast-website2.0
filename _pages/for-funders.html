@@ -12,7 +12,7 @@ nav_highlight: /for-funders
   </div>
 </div>
 
-<div class="mw7 center pv4">
+<div class="mw7 center pv4 ph3">
   <h2 class="teal f3 tc">Building Programmes</h2>
   <p class="measure tc center">{{ funders_text.building_programmes }}</p>
 </div>
@@ -20,17 +20,19 @@ nav_highlight: /for-funders
 <div class="bg-navy pt4 pb5">
   <h2 class="white f3 tc">Helping run funded programmes</h2>
 
-  <div class="mw7 center bg-white mt5 pt4 pb5">
-    <div class="measure center">
+  <div class="mw7 center mt5 pb5 ph3">
+    <div class="bg-white pa4">
+      <div class="measure center">
 
-      <div class="tc">{{ funders_text.funded_programmes.headline | markdownify }}</div>
-      {% include image_block.html
-        image=site.data.logos.funded_by_comic.image_url
-        height="100px" %}
-      <p class="ttu fw7">Case study</p>
-      <p class="fw7">Comic Relief</p>
-      <div>{{ funders_text.funded_programmes.case_study | markdownify }}</div>
+        <div class="tc">{{ funders_text.funded_programmes.headline | markdownify }}</div>
+        {% include image_block.html
+          image=site.data.logos.funded_by_comic.image_url
+          height="100px" %}
+        <p class="ttu fw7">Case study</p>
+        <p class="fw7">Comic Relief</p>
+        <div>{{ funders_text.funded_programmes.case_study | markdownify }}</div>
 
+      </div>
     </div>
   </div>
 </div>
@@ -38,22 +40,24 @@ nav_highlight: /for-funders
 <div class="bg-postit-1 bg-center cover pv4">
   <h2 class="navy tc f3">Building your own digital capabilities</h2>
 
-  <div class="mw7 center bg-white mt5 pv4">
-    <div class="measure center">
+  <div class="mw7 center mt5 pv4 ph3">
+    <div class="bg-white pa4">
+      <div class="measure center">
 
-      <div class="tc">{{ funders_text.digital_capabilities.headline | markdownify }}</div>
-      {% include image_block.html
-                 image=site.data.logos.esmee
-                 height="100px" %}
-      <p class="ttu fw7">Case study</p>
-      <p class="fw7">Esmée Fairbairn</p>
-      <div>{{ funders_text.digital_capabilities.case_study | markdownify }}</div>
+        <div class="tc">{{ funders_text.digital_capabilities.headline | markdownify }}</div>
+        {% include image_block.html
+          image=site.data.logos.esmee
+          height="100px" %}
+          <p class="ttu fw7">Case study</p>
+          <p class="fw7">Esmée Fairbairn</p>
+          <div>{{ funders_text.digital_capabilities.case_study | markdownify }}</div>
 
+        </div>
     </div>
   </div>
 </div>
 
-<div class="mw7 center pt4 pb5">
+<div class="mw7 center pt4 pb5 ph3">
   <h2 class="tc f4 mw6 center">Interested in knowing more about how we help funders deliver successful programmes, or any of our other work with funders?</h2>
 
   <div class="tc mw6 center">
