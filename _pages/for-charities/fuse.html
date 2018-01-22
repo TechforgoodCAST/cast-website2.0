@@ -9,9 +9,9 @@ nav_highlight: /for-charities
 <div class="mw7 center mt3 mb4 flex">
   <div class="w-100 w-50-ns pv4 ph3">
     {% include image_block.html
-       image=site.data.logos.fuse
-       alt="fuse"
-       height="204px" %}
+               image=site.data.logos.fuse
+               alt="fuse"
+               height="204px" %}
   </div>
 
   <div class="w-100 w-50-ns pv4 ph3">
@@ -91,12 +91,11 @@ nav_highlight: /for-charities
       <div class="w-50 w-25-ns pa3">
 
         {% include image_block_link.html
-           link=item.link
-           image=item.image_url
-           alt=item.alt
-           height="100px"
-           external="true"
-        %}
+                   link=item.link
+                   image=item.image_url
+                   alt=item.alt
+                   height="100px"
+                   external="true" %}
 
       </div>
     {% endfor %}
@@ -108,22 +107,20 @@ nav_highlight: /for-charities
   <div class="flex mw6 center">
     <div class="w-50">
       {% include image_block_link.html
-         link=comic.link
-         image=comic.image_url
-         alt="comic relief"
-         height="100px"
-         external="true"
-      %}
+                 link=comic.link
+                 image=comic.image_url
+                 alt="comic relief"
+                 height="100px"
+                 external="true" %}
     </div>
 
     <div class="w-50">
       {% include image_block_link.html
-         link=blf.link
-         image=blf.image_url
-         alt="big lottery fund"
-         height="100px"
-         external="true"
-      %}
+                 link=blf.link
+                 image=blf.image_url
+                 alt="big lottery fund"
+                 height="100px"
+                 external="true" %}
     </div>
   </div>
 </div>
@@ -138,11 +135,12 @@ nav_highlight: /for-charities
       <div class="w-100 w-50-ns">
         <div class="ph4 pb4 bg-white">
           {% include image_block.html
-             image=site.data.logos.age_uk
-             alt="age uk"
-             height="200px" %}
+                     image=site.data.logos.age_uk
+                     alt="age uk"
+                     height="200px" %}
+
           <p class="ttu fw7">Case study</p>
-          <p class="fw7">Age UK</p>
+          <p class="fw7 f4">Age UK</p>
           <div>{{ success.age_uk | markdownify }}</div>
         </div>
       </div>
@@ -150,11 +148,12 @@ nav_highlight: /for-charities
       <div class="w-100 w-50-ns">
         <div class="ph4 pb4 bg-white">
           {% include image_block.html
-             image=site.data.logos.action_for_children
-             alt="action for children"
-             height="200px" %}
+                     image=site.data.logos.action_for_children
+                     alt="action for children"
+                     height="200px" %}
+
           <p class="ttu fw7">Case study</p>
-          <p class="fw7">Action for children</p>
+          <p class="fw7 f4">Action for children</p>
           <div>{{ success.action_for_children | markdownify }}</div>
         </div>
       </div>
@@ -168,7 +167,10 @@ nav_highlight: /for-charities
     <p class="f5 fw7">{{ fuse_text.unavailable_message.head }}</p>
     <p>{{ fuse_text.unavailable_message.sub }}</p>
     <div class="ph4 f4">
-      {% include button.html text="Get in touch about Fuse" link="mailto:hello@wearecast.org.uk?subject=fuse enquiry" %}
+      {% include button.html
+                 text="Get in touch about Fuse"
+                 link="mailto:hello@wearecast.org.uk?subject=fuse enquiry"
+                 inline="true" %}
     </div>
   </div>
 </div>

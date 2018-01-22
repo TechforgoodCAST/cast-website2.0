@@ -4,6 +4,8 @@ permalink: /for-charities/
 nav_highlight: /for-charities
 ---
 
+{% assign charities_text = site.data.for_charities_text %}
+
 <div class="bg-all-hands cover bg-top ph5 pv6">
   <div class="bg-navy pv3 ph4 mw6 ml4-ns">
     <h2 class="teal">Helping nonprofits make innovative use of technology to address social challenges</h2>
@@ -11,23 +13,23 @@ nav_highlight: /for-charities
 </div>
 
 <div class="mw7 center pa4 pb5">
-  <h2 class="teal f3 tc mb5 fw7">Our funded programmes for charities</h2>
+  <h2 class="teal f3 tc mb5 fw7">Our programmes for charities</h2>
   <div class="flex flex-wrap overflow-hidden">
 
     {% capture fuse_link %}
       {% link _pages/for-charities/fuse.html %}
     {% endcapture %}
 
-    <div class="measure w-100 w-50-ns ph3 tc mb5 equal-height-column flex flex-column justify-between">
+    <div class="measure w-100 w-50-ns ph3 tc equal-height-column flex flex-column justify-between">
       {% include image_block_link.html
-         link=fuse_link
-         image=site.data.logos.fuse
-         alt="fuse"
-         height="100px" %}
+                 link=fuse_link
+                 image=site.data.logos.fuse
+                 alt="fuse"
+                 height="100px" %}
 
       <h3 class="teal fw4 tc">The world's first only non profit technology accelerator</h3>
-      <div>{{ site.data.for_charities_text.fuse_blurb | markdownify }}</div>
-      <div class="center mw5 f4">
+      <div>{{ charities_text.fuse_blurb | markdownify }}</div>
+      <div class="center mw5 f4 mb5">
         {% include button.html text="More about Fuse" link=fuse_link %}
       </div>
     </div>
@@ -36,16 +38,16 @@ nav_highlight: /for-charities
       {% link _pages/for-charities/fellowship.html %}
     {% endcapture %}
 
-    <div class="measure w-100 w-50-ns ph3 tc mb5 equal-height-column flex flex-column justify-between">
+    <div class="measure w-100 w-50-ns ph3 tc equal-height-column flex flex-column justify-between">
       {% include image_block_link.html
-         link=fellowship_link
-         image=site.data.logos.fellowship
-         alt="fellowship"
-         height="100px" %}
+                 link=fellowship_link
+                 image=site.data.logos.fellowship
+                 alt="fellowship"
+                 height="100px" %}
 
       <h3 class="teal fw4 tc">Helping nonprofit senior leaders and CEOs understand digital</h3>
-      <div>{{ site.data.for_charities_text.fellowship_blurb | markdownify }}</div>
-      <div class="center mw5 f4">
+      <div>{{ charities_text.fellowship_blurb | markdownify }}</div>
+      <div class="center f4 mb5">
         {% include button.html text="More about Fellowship" link=fellowship_link %}
       </div>
     </div>
@@ -57,37 +59,20 @@ nav_highlight: /for-charities
   <div class="mw7 center tc">
     <h2 class="white f3">Training and Learning</h2>
     <div class="white measure center">
-      {{ site.data.for_charities_text.training_and_learning | markdownify }}
+      {{ charities_text.training_and_learning.headline | markdownify }}
     </div>
 
     <div class="flex flex-wrap pb5">
-      <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
-        <div class="bg-white equal-height-column pv3 ph4">
-          <h3 class="f5 fw7 teal">Interviews and research. Getting to know your audience</h3>
-          <div class="silver">{{ site.data.for_charities_text.know_your_audience | markdownify }}</div>
-        </div>
-      </div>
+      {% for item in charities_text.training_and_learning.sessions %}
 
-      <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
-        <div class="bg-white equal-height-column pv3 ph4">
-          <h3 class="f5 fw7 teal">Prototyping services and products</h3>
-          <div class="silver">{{ site.data.for_charities_text.prototyping | markdownify }}</div>
+        <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
+          <div class="bg-white equal-height-column pv3 ph4">
+            <h3 class="f5 fw7 teal">{{ item.title }}</h3>
+            <div class="silver">{{ item.text | markdownify }}</div>
+          </div>
         </div>
-      </div>
 
-      <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
-        <div class="bg-white equal-height-column pv3 ph4">
-          <h3 class="f5 fw7 teal">User testing. From ideas to end-to-end service pilots.</h3>
-          <div class="silver">{{ site.data.for_charities_text.user_testing | markdownify }}</div>
-        </div>
-      </div>
-
-      <div class="w-100 w-50-ns pv3 ph2 overflow-hidden">
-        <div class="bg-white equal-height-column pv3 ph4">
-          <h3 class="f5 fw7 teal">Uncovering financial value and sustainability.</h3>
-          <div class="silver">{{ site.data.for_charities_text.sustainability | markdownify }}</div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -97,29 +82,19 @@ nav_highlight: /for-charities
     <h2 class="ma0 pv5 tc fw7 f3">Bespoke Consultancy</h2>
 
     <div class="flex flex-wrap white tc overflow-hidden ph1">
-      <div class="w-100 w-33-ns ph2">
-        <div class="bg-gold pa3 equal-height-column">
-          <h3>Who?</h3>
-          <p class="pb4">For organisations where our funded programmes aren’t quite right for their needs, we offer bespoke consultancy.</p>
-        </div>
-      </div>
+      {% for item in charities_text.bespoke_consultancy_explanations %}
 
-      <div class="w-100 w-33-ns ph2">
-        <div class="bg-red pa3 equal-height-column">
-          <h3>What?</h3>
-          <p class="pb4">Our digital experts, alongside the charity, design programmes of work to tackle the particular problem the charity faces.</p>
+        <div class="w-100 w-33-ns ph2">
+          <div class="bg-{{ item.background }} pa3 equal-height-column">
+            <h3>{{ item.title }}</h3>
+            <p class="pb4">{{ item.text }}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="w-100 w-33-ns ph2">
-        <div class="bg-green pa3 equal-height-column">
-          <h3>How?</h3>
-          <p class="pb4">We still apply our core principles of learn by doing, digital skills transfer and a user-led, test-driven approach.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
-    <div class="ph3 mt4">
+    <div class="ph3 mt4 mb5">
       <div class="bg-white pv3">
         <p class="tc fw7">A few of the charities who have worked with us on tailor-made projects</p>
 
@@ -129,11 +104,11 @@ nav_highlight: /for-charities
             <div class="w-33-ns w-100 ph5-m ph3 pb4 pt3">
 
               {% include image_block_link.html
-                 link=item.link
-                 image=item.image_url
-                 alt=item.alt
-                 height="100px"
-                 external="true" %}
+                         link=item.link
+                         image=item.image_url
+                         alt=item.alt
+                         height="100px"
+                         external="true" %}
 
             </div>
 
@@ -141,13 +116,38 @@ nav_highlight: /for-charities
         </div>
       </div>
     </div>
+
+    <h2 class="tc f3">Case Studies</h2>
+    <div class="flex flex-wrap ph3">
+      {% for item in charities_text.bespoke_case_studies %}
+
+        <div class="w-100 w-50-ns">
+          <div class="ph4 pb4 bg-white">
+            <div class="ph4 pv4 ph5-m">
+              {% include image_block.html
+                         image=item.image
+                         alt=item.title
+                         height="150px" %}
+            </div>
+
+            <p class="ttu fw7">Case study</p>
+            <p class="fw7 f4">{{ item.title }}</p>
+            <div>{{ item.text | markdownify }}</div>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
   </div>
 </div>
 
 <div class="measure center tc pt4 pb5">
-  <p>Interested in one of our core funded programmes? Or wondering how digital can help your charity tackle tough social challenges?</p>
+  <h2 class="tc f4 center">Interested in one of our core funded programmes? Or wondering how digital can help your charity tackle tough social challenges?</h2>
 
   <div class="mw5 center">
-    {% include button.html text="Get in touch" link="mailto:hello@wearecast.org.uk" %}
+    {% include button.html
+               text="Get in touch"
+               link="mailto:hello@wearecast.org.uk"
+               inline="true" %}
   </div>
 </div>

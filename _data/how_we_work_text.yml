@@ -1,0 +1,22 @@
+principles:
+  - |-
+      We are a networked organisation that draws in expertise as appropriate to each project or programme of work.
+  - |-
+      We are a learning organisation that continues to assess and refine our own approaches, sharing what we are learning and also building on the work of others.
+  - |-
+      We work **with** social sector organisations rather the more traditional agency or consultancy model that develops products **for** them.
+transformation: Our core work focusses on transforming service delivery for nonprofits through the use of digital technology. We don't do fundraising, social media or traditional website design and build. A more traditional digital agency would be better placed to that that type of work.
+supporters_blurb: Thanks to our supporters who fund our work. And a big shout out to our network of truster partner agencies and organisations across the Tech for Good community.
+tech_for_good_activities:
+  - title: Tech for Good inspiration
+    text: We've put together a handy GitHub guide to some awesome Tech for Good. Please add your contributions!
+    cta: View the list on GitHub
+    link: https://github.com/TechforgoodCAST/awesome-techforgood
+  - title: Looking for funding?
+    text: CAST itself isn't a funder, but we are currently incubating a funder recommendation platform called Beehive.
+    cta: Visit Beehive
+    link: https://www.beehivegiving.org/
+  - title: Join the Tech for Good community
+    text: There are currently regular Tech for Good Meetups in London, Manchester, Sheffield, Cambridge, Dublin, Bristol and Bath plus NetSquared events country-wide.
+    cta: See the latest events
+    link: https://tech-for-good-near-you.herokuapp.com

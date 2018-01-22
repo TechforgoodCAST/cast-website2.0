@@ -6,23 +6,52 @@ fellowship_blurb: |-
   Our Digital Fellowship is a carefully constructed learning programme that teaches its fellows the key aspects of the digital development process; from paper prototyping to business modelling.
 
   We bring the leaders together to learn from industry experts as well as spending time with key organisations leading the field.
-training_and_learning: |-
-  We prepare and run a range of training workshops.
+training_and_learning:
+  headline: |-
+    We prepare and run a range of training workshops.
 
-  These are modelled on the work undertaken in our core programmes and teach some of the key tools and techniques for researching, designing, prototyping and piloting new digital products and services.
-know_your_audience: |-
-  **1 hour presentation up to a 6 hour workshop**
+    These are modelled on the work undertaken in our core programmes and teach some of the key tools and techniques for researching, designing, prototyping and piloting new digital products and services.
+  sessions:
+    - title: Interviews and research. Getting to know your audience.
+      text: |-
+        If you don't know your users' needs and behaviours you won't be able to design effective services for them.
 
-  Why do we speak to users? How do we structure an interview? How do you write a guided conversation script?
-prototyping: |-
-  **45 — 90 minutes**
+        This session shows how to preprare and run effective one-to-one research sessions.
+    - title: Design hops.
+      text: |-
+        Digital product development may be a new concept for your organisation.
 
-  Why do we prototype? How can we prototype? What are the key traits of a prototype? What are some of the perils of prototyping?
-user_testing: |-
-  **45 — 60 minutes**
+        Get your team to understand some of the tools, principles and approaches to digital product and service development.
+    - title: Testing and prototyping. From ideas to end-to-end service pilots.
+      text: |-
+        Before you roll out your new service you want to ensure it's well tested with the target users and the kinks are ironed out.
 
-  What’s the difference between testing some ideas and piloting a full service? What are some quick and easy ways to test your ideas? How do you set up and measure a pilot?
-sustainability: |-
-  **3 hour workshop**
+        Learn tactics and approaches to testing, why we prototype and how to set up a pilot.
+    - title: Uncovering financial value and sustainability.
+      text: |-
+        How is your new service going to sustain itself?
 
-  A fast paced look at how the new product/ service can continue to be sustainable as it grows, exploring 55 business models and their applicability to the new service and wider charity operation.
+        Learn how to make your new service sustainable by exploring different business models, their applicability to both the service and wider charity operation.
+bespoke_consultancy_explanations:
+  - title: Who
+    background: gold
+    text: For organisations where our funded programmes aren’t quite right for their needs, we offer bespoke consultancy.
+  - title: What
+    background: red
+    text: Our digital experts, alongside the charity, design programmes of work to tackle the particular problem the charity faces.
+  - title: How
+    background: green
+    text: We still apply our core principles of learn by doing, digital skills transfer and a user-led, test-driven approach.
+bespoke_case_studies:
+  - image: https://www.datocms-assets.com/4269/1515588362-ncvo.png
+    title: NCVO
+    text: |-
+      On the Fuse programme, Age UK spoke to staff, volunteers and older people to understand how technology could have a transformative impact in supporting older people to enjoy later life. After going up and down the country visiting people's homes, a new tool was developed to enable workers to have natural conversations with older people that covered key topics to ensure they help as much as possible.
+
+      Age UK is currently piloting the new tool in four locations across the UK. After the pilot, the team plan to make changes based on feedback from users and then roll out to more locations.
+  - image: https://www.datocms-assets.com/4269/1515588359-ybi.png
+    title: Youth Business International
+    text: |-
+      On the Fuse programme, Age UK spoke to staff, volunteers and older people to understand how technology could have a transformative impact in supporting older people to enjoy later life. After going up and down the country visiting people's homes, a new tool was developed to enable workers to have natural conversations with older people that covered key topics to ensure they help as much as possible.
+
+      Age UK is currently piloting the new tool in four locations across the UK. After the pilot, the team plan to make changes based on feedback from users and then roll out to more locations.

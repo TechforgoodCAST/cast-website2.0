@@ -1,0 +1,81 @@
+---
+layout: default
+permalink: /how-we-work
+nav_highlight: /how-we-work
+---
+
+{% assign we_work_text = site.data.how_we_work_text %}
+
+<div class="bg-drafting bg-bottom cover bg-top ph5 pv6">
+  <div class="bg-navy pv3 ph4 mw6 ml4-ns">
+    <h2 class="teal">Forming strong, collaborative partnerships with social sector organisations</h2>
+  </div>
+</div>
+
+<div class="mw7 center pt4 pb5">
+  <h2 class="teal tc f3">Our core principles of how we work</h2>
+
+  <div class="flex flex-wrap overflow-hidden">
+    {% for item in we_work_text.principles %}
+
+      <div class="w-100 w-33-ns tc pa2 relative">
+        <div class="white bg-green left-0 right-0 relative z-5 circle center flex flex-column justify-center">
+          <p class="f2 white ma0">{{ forloop.index }}</p>
+        </div>
+
+        <div class="z-0 relative" style="margin-top: -50px">
+          <div class="bg-light-gray pt5 pa3 equal-height-column">
+            {{ item | markdownify }}
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+  <h2 class="teal f3 tc mt5 mw6 center">Transforming service delivery with digital technology</h2>
+  <p class="tc measure center">{{ we_work_text.transformation }}</p>
+</div>
+
+<div class="bg-green pv5 ph3">
+  <div class="mw7 center tc">
+    <h2 class="white f3 mt0">Our clients and supporters</h2>
+    <p class="white measure center">{{ we_work_text.supporters_blurb }}</p>
+
+    <div class="flex flex-wrap mt4 mb5 pa4 bg-white">
+      {% for item in site.data.clients_and_supporters %}
+
+        <div class="w-50 w-25-ns pa3">
+          {% include image_block_link.html
+                     link=item.link
+                     image=item.image_url
+                     alt=item.alt
+                     height="100px"
+                     external="true" %}
+        </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="mw7 center pt5 pb5 ph3 ph1-ns">
+  <h2 class="teal tc f3 mt0">Get involved in the Tech For Good community</h2>
+
+  <div class="flex flex-wrap">
+    {% for item in we_work_text.tech_for_good_activities %}
+      <div class="w-100 w-33-ns pa3 tc flex flex-column justify-between">
+        <h3 class="teal">{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+
+        <div class="ph2">
+          {% include inverted_button.html
+                     text=item.cta
+                     link=item.link
+                     alt=item.alt
+                     external="true" %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
