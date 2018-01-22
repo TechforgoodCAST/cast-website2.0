@@ -144,13 +144,32 @@ nav_highlight: /for-charities
 </div>
 
 <div class="bg-handshake bg-center cover mt5">
-  <div class="mw7 center pv4">
-    <div class="bg-white mw6 pa4">
+  <div class="mw7 center pv4 ph3">
+    <div class="bg-white pa4 w-100 w-80-ns">
       <p class="f1 absolute ma0 silver" style="margin-top: -2.5rem">“</p>
       <div>{{ fellowship_text.testimonial.text | markdownify }}</div>
       <p class="f7 ma1">{{ fellowship_text.testimonial.name }}</p>
       <p class="f7 ma1">{{ fellowship_text.testimonial.organisation }}</p>
     </div>
+  </div>
+</div>
+
+<div class="mw7 center mt4 mb5">
+  <h2 class="teal tc f3">Our previous Fellows came from ...</h2>
+
+  <div class="flex flex-wrap mb5">
+    {% for item in site.data.fellowship_alumni %}
+      <div class="w-50 w-25-ns pa3">
+
+        {% include image_block_link.html
+                   link=item.link
+                   image=item.image_url
+                   alt=item.alt
+                   height="100px"
+                   external="true" %}
+
+      </div>
+    {% endfor %}
   </div>
 </div>
 

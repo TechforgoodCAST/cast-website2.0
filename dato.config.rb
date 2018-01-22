@@ -62,6 +62,16 @@ data = [
     }
   },
   {
+    file_name: "fellowship_alumni",
+    data: dato.fellowship_alumnis.map { |item| {
+      image_url: YamlHelper.dato_origin(item.image.path),
+      image_alt: item.image.alt,
+      image_title: item.image.title,
+      link: item.link,
+      name: item.name }
+    }
+  },
+  {
     file_name: "team",
     data: dato.teams.map { |item| {
       image_url: YamlHelper.dato_origin(item.image.path),
