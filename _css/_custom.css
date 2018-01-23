@@ -161,6 +161,18 @@ ul {
 }
 
 
+/* mailchimp */
+
+#mc_embed_signup div.mce_inline_error {
+  color: #fff;
+  background-color: var(--dark-red)!important;
+  border-radius: var(--border-radius-2)!important;
+  padding: var(--spacing-small)!important;
+  margin-bottom: var(--spacing-small)!important;
+  font-size: var(--font-size-7)!important;
+}
+
+
 /* hamburger */
 
 div[open] .upper {
