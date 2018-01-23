@@ -68,8 +68,8 @@ ul {
 }
 
 @media (--breakpoint-not-small) {
-  .min-height-4-ns {
-    min-height: var(--max-width-4);
+  .height-6-ns {
+    height: var(--height-6);
   }
 }
 
