@@ -67,6 +67,12 @@ ul {
   filter: invert(50%);
 }
 
+@media (--breakpoint-not-small) {
+  .min-height-4-ns {
+    min-height: var(--max-width-4);
+  }
+}
+
 /* extra */
 
 .bg-drafting {
