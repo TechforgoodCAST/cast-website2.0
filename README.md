@@ -77,7 +77,7 @@ To pull data from `Dato`:
 > dato dump --token=<API_READONLY_TOKEN>
 ```
 
-The `API_READONLY_TOKEN` can be found in the dato admin dashboard
+The `API_READONLY_TOKEN` can be found in the [dato admin dashboard](https://cast-website.admin.datocms.com/admin/access_tokens)
 
 This will create new `yaml` files in the `_data` directory
 
