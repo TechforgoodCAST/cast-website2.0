@@ -1,0 +1,27 @@
+---
+layout: default
+title: For the Communty
+permalink: /community
+nav_highlight: /community
+---
+
+<div class="mw7 center pt5 pb5 ph3 ph1-ns">
+  <h2 class="teal tc f3 mt0">Get involved in the Tech For Good community</h2>
+
+  <div class="flex flex-wrap">
+    {% for item in we_work_text.tech_for_good_activities %}
+      <div class="w-100 w-33-ns pa3 tc flex flex-column justify-between">
+        <h3 class="teal">{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+
+        <div class="ph2">
+          {% include inverted_button.html
+                     text=item.cta
+                     link=item.link
+                     alt=item.alt
+                     external="true" %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

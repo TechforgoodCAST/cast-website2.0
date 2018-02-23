@@ -9,28 +9,24 @@ nav_highlight: /for-funders
 
 <div class="bg-all-hands cover bg-top ph3 ph5-ns pv5 pv6-ns">
   <div class="bg-navy pv3 ph4 mw6 ml4-ns">
-    <h2 class="teal">Helping funders devise, plan and run their digital-focussed programmes for nonprofits</h2>
+    <h2 class="teal">Helping funders to incorporate digital into their grant-making strategy, programmes and practices</h2>
   </div>
 </div>
 
 <div class="mw7 center pv4 ph3">
-  <h2 class="teal f3 tc">Building Programmes</h2>
+  <h2 class="teal f3 tc">Supporting Funder+ Programmes</h2>
   <p class="measure tc center">{{ funders_text.building_programmes }}</p>
 </div>
 
 <div class="bg-navy pt4 pb5">
-  <h2 class="white f3 tc">Helping run funded programmes</h2>
 
   <div class="mw7 center mt5 pb5 ph3">
     <div class="bg-white pa4">
       <div class="measure center">
 
-        <div class="tc">{{ funders_text.funded_programmes.headline | markdownify }}</div>
         {% include image_block.html
           image=site.data.logos.funded_by_comic.image_url
           height="100px" %}
-        <p class="ttu fw7">Case study</p>
-        <p class="fw7">Comic Relief</p>
         <div>{{ funders_text.funded_programmes.case_study | markdownify }}</div>
 
       </div>
@@ -38,19 +34,21 @@ nav_highlight: /for-funders
   </div>
 </div>
 
-<div class="bg-postit-1 bg-center cover pv4">
-  <h2 class="navy tc f3">Building your own digital capabilities</h2>
+<div class="mw7 center pv4 ph3">
+  <h2 class="teal f3 tc">Supporting the assessment of digital projects</h2>
+  <p class="measure tc center">Drawing on its extensive experience of funding tech for good projects, CAST supports funders in assessing and supporting digital projects.</p>
+</div>
 
-  <div class="mw7 center mt5 pv4 ph3">
+<div class="bg-navy pt4 pb5">
+  <h2 class="white tc f3">Helping funders use digital for more effective grant-making</h2>
+  <p class="white tc">CAST supports funders to apply digital technology to improve their assessment, monitoring and management of grants.</p>
+  <div class="mw7 center pv4 ph3">
     <div class="bg-white pa4">
       <div class="measure center">
 
-        <div class="tc">{{ funders_text.digital_capabilities.headline | markdownify }}</div>
         {% include image_block.html
           image=site.data.logos.esmee
           height="100px" %}
-          <p class="ttu fw7">Case study</p>
-          <p class="fw7">Esmée Fairbairn</p>
           <div>{{ funders_text.digital_capabilities.case_study | markdownify }}</div>
 
         </div>

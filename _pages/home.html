@@ -10,7 +10,6 @@
     <div class="bg-navy mw6 center relative">
       <div class="ph4 pv3 tc">
         <h2 class="teal f3">CAST is accelerating the use of technology for social impact</h2>
-        <p class="white">{{ site.data.home_text.main_headline }}</p>
       </div>
     </div>
   </div>
@@ -38,24 +37,50 @@
 <div class="mw7 center ph3 pt3 pb4">
   <h2 class="teal f3 tc">Transforming service delivery with digital technology</h2>
   <p class="measure tc center">{{ site.data.home_text.how_we_can_help }}</p>
+
+  <h2 class="teal tc f3">Our core principles of how we work</h2>
+
+  <div class="flex flex-wrap overflow-hidden">
+    {% for item in we_work_text.principles %}
+
+      <div class="w-100 w-33-ns tc pa2 relative">
+        <div class="white bg-green left-0 right-0 relative z-5 circle center flex flex-column justify-center">
+          <p class="f2 white ma0">{{ forloop.index }}</p>
+        </div>
+
+        <div class="z-0 relative" style="margin-top: -50px">
+          <div class="bg-light-gray pt5 pa3 equal-height-column">
+            {{ item | markdownify }}
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+</div>
+
+<div class="mw7 center ph3 pt3 pb4">
+  <h2 class="teal f3 tc">Our core principles of how we work</h2>
+  <p class="measure tc center"></p>
 </div>
 
 <div class="bg-teal ph3 pv4">
-  <h2 class="white f3 tc">Are you a charity or a funder?</h2>
+  <h2 class="white f3 tc">Are you a nonprofit or a funder?</h2>
 
   <div class="mw7 center flex flex-wrap">
     <div class="w-100 w-50-ns pa2">
       <div class="bg-white tc pv3 ph4">
-        <h2 class="teal">How we help charities</h2>
+        <h2 class="teal">How we help nonprofits</h2>
         <p class="silver">{{ site.data.home_text.how_we_help_charities }}<p>
         <div class="center mv4">
 
           {% capture charities_link %}
-            {% link _pages/for-charities.html %}
+            {% link _pages/for-nonprofits.html %}
           {% endcapture %}
 
           {% include button.html
-                     text="I am a charity"
+                     text="I am a nonprofit"
                      link=charities_link
                      inline="true" %}
         </div>
@@ -70,7 +95,7 @@
         <div class="center mv4">
 
           {% capture funders_link %}
-            {% link _pages/for-charities.html %}
+            {% link _pages/for-nonprofits.html %}
           {% endcapture %}
 
           {% include button.html
