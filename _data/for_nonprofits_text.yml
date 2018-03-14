@@ -1,16 +1,16 @@
 fuse_blurb: |-
   We know that technology has the potential to revolutionise how we address social problems.
 
-  So we developed Fuse. The world's only nonprofit technology accelerator. Over an intensive 12 week programme, Fuse works with established nonprofits to build scalable, user-centred, digital services.
+  So we developed Fuse: the world's only technology accelerator for established nonprofits. Over an intensive 12 week programme, Fuse works with organisations to build sustainable, user-centred digital services.
 fellowship_blurb: |-
-  Our Digital Fellowship is a carefully constructed learning programme that teaches its fellows the key aspects of the digital development process; from paper prototyping to business modelling.
+  Our Digital Fellowship is a tailored action learning programme for nonprofit leaders. It teaches the key aspects of digital development, from paper prototyping to business modelling.
 
-  We bring the leaders together to learn from industry experts as well as spending time with key organisations leading the field.
+  Eight hands-on sessions led by industry experts culminate in a design workshop within each organisation, where we unpack a key challenge that digital might help address and support Fellows to disseminate their learnings to their teams.
 training_and_learning:
   headline: |-
-    We prepare and run a range of training workshops.
+    We also prepare and run training workshops on specific topics.
 
-    These are modelled on the work undertaken in our core programmes and teach some of the key tools and techniques for researching, designing, prototyping and piloting new digital products and services.
+    Inspired by the content and learnings from our core programmes, these explore charity-relevant techniques for researching, designing, prototyping and piloting new digital products and services.
   sessions:
     - title: Interviews and research. Getting to know your audience.
       text: |-
@@ -19,29 +19,29 @@ training_and_learning:
         This session shows how to preprare and run effective one-to-one research sessions.
     - title: Design hops.
       text: |-
-        Digital product development may be a new concept for your organisation.
+        Digital product or service development may be a new concept for your organisation.
 
-        Get your team to understand some of the tools, principles and approaches to digital product and service development.
+        Get an energetic, practical introduction to the principles and approaches used to create tech for good. This session helps you unpack a key organisational challenge, map existing responses as well as your organisation's assets, and identify points where digital might help. 
     - title: Testing and prototyping. From ideas to end-to-end service pilots.
       text: |-
         Before you roll out your new service you want to ensure it's well tested with the target users and the kinks are ironed out.
 
-        Learn tactics and approaches to testing, why we prototype and how to set up a pilot.
+        Learn tactics and methods of testing, including why we prototype and how to set up a pilot.
     - title: Uncovering financial value and sustainability.
       text: |-
         How is your new service going to sustain itself?
 
-        Learn how to make your new service sustainable by exploring different business models, their applicability to both the service and wider charity operation.
+        Understand different business models that can make it sustainable, and how to apply these in your own context.
 bespoke_consultancy_explanations:
   - title: Who
     background: gold
-    text: For organisations where our funded programmes aren’t quite right for their needs, we offer bespoke consultancy.
+    text: Our funded programmes won't fit the needs of every organisation. But we can probably still help!
   - title: What
     background: red
-    text: Our digital experts, alongside the charity, design programmes of work to tackle the particular problem the charity faces.
+    text: Our digital experts work alongside organisations to design bespoke programmes of work. These respond to unique challenges, teams and needs.
   - title: How
     background: green
-    text: We still apply our core principles of learn by doing, digital skills transfer and a user-led, test-driven approach.
+    text: We still apply our core principles of learn-by-doing, digital skills transfer and a user-led, test-driven approach.
 bespoke_case_studies:
   - image: https://www.datocms-assets.com/4269/1515588362-ncvo.png
     title: NCVO
